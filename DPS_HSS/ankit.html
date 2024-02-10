@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+<html lang="en-US" class=" optml_no_js no-js no-svg">
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],window.addEventListener("pageshow",(e=>{this.persisted=e.persisted})),window.addEventListener("DOMContentLoaded",(()=>{this._preconnect3rdParties()})),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){document.hidden?e._triggerListener():(this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventHandler,{passive:!0}))),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler))}_removeUserInteractionListener(){this.triggerEvents.forEach((e=>window.removeEventListener(e,this.userEventHandler,{passive:!0}))),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"))}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick")}_onTouchEnd(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach((e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))}))}_renameDOMAttribute(e,t,n){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(n,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((t=>{if(t.hasAttribute("src")){const n=new URL(t.src).origin;n!==location.origin&&e.push({src:n,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}})),e=[...new Map(e.map((e=>[JSON.stringify(e),e]))).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._triggerWindowLoad()}catch(e){}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this._replayClicks()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._littleBreath(),new Promise((t=>{const n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t());try{e.parentNode.replaceChild(n,e)}catch(e){t()}}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var n=document.createDocumentFragment();e.forEach((e=>{if(e.src){const i=document.createElement("link");i.href=e.src,i.rel=t,"preconnect"!==t&&(i.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(i.crossOrigin=!0),e.crossOrigin&&(i.crossOrigin=e.crossOrigin),n.appendChild(i)}})),document.head.appendChild(n)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(i){e["rocket"+t]=n=i}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),await this._littleBreath();const e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted})}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,i=document.createRange(),r=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const s=document.createDocumentFragment();i.setStart(s,0),s.appendChild(i.createContextualFragment(t)),r.insertBefore(s,o)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise((e=>setTimeout(e))):new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+	
+		<!-- responsive meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Website Development &#8211; Pristine Ideas</title><style id="rocket-critical-css">@-webkit-keyframes pulse{0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}50%{-webkit-transform:scale3d(1.05,1.05,1.05);transform:scale3d(1.05,1.05,1.05)}100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes pulse{0%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}50%{-webkit-transform:scale3d(1.05,1.05,1.05);transform:scale3d(1.05,1.05,1.05)}100%{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}:root{--blue:#007bff;--indigo:#6610f2;--purple:#6f42c1;--pink:#e83e8c;--red:#dc3545;--orange:#fd7e14;--yellow:#ffc107;--green:#28a745;--teal:#20c997;--cyan:#17a2b8;--white:#fff;--gray:#6c757d;--gray-dark:#343a40;--primary:#007bff;--secondary:#6c757d;--success:#28a745;--info:#17a2b8;--warning:#ffc107;--danger:#dc3545;--light:#f8f9fa;--dark:#343a40;--breakpoint-xs:0;--breakpoint-sm:576px;--breakpoint-md:768px;--breakpoint-lg:992px;--breakpoint-xl:1200px;--font-family-sans-serif:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";--font-family-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}*,::after,::before{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%}header,nav,section{display:block}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}h2,h3{margin-top:0;margin-bottom:.5rem}p{margin-top:0;margin-bottom:1rem}ul{margin-top:0;margin-bottom:1rem}ul ul{margin-bottom:0}b{font-weight:bolder}a{color:#007bff;text-decoration:none;background-color:transparent}img{vertical-align:middle;border-style:none}button{border-radius:0}button{margin:0;font-family:inherit;font-size:inherit;line-height:inherit}button{overflow:visible}button{text-transform:none}[type=button],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,button::-moz-focus-inner{padding:0;border-style:none}::-webkit-file-upload-button{font:inherit;-webkit-appearance:button}h2,h3{margin-bottom:.5rem;font-family:inherit;font-weight:500;line-height:1.2;color:inherit}h2{font-size:2rem}h3{font-size:1.75rem}.container{width:100%;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:576px){.container{max-width:540px}}@media (min-width:768px){.container{max-width:720px}}@media (min-width:992px){.container{max-width:960px}}@media (min-width:1200px){.container{max-width:1140px}}.row{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px}.col-xl-12{position:relative;width:100%;padding-right:15px;padding-left:15px}@media (min-width:1200px){.col-xl-12{-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}}.collapse:not(.show){display:none}.dropdown{position:relative}.navbar-collapse{-ms-flex-preferred-size:100%;flex-basis:100%;-ms-flex-positive:1;flex-grow:1;-ms-flex-align:center;align-items:center}@media (min-width:992px){.navbar-expand-lg{-ms-flex-flow:row nowrap;flex-flow:row nowrap;-ms-flex-pack:start;justify-content:flex-start}.navbar-expand-lg .navbar-collapse{display:-ms-flexbox!important;display:flex!important;-ms-flex-preferred-size:auto;flex-basis:auto}}.clearfix::after{display:block;clear:both;content:""}.float-left{float:left!important}.float-right{float:right!important}.text-center{text-align:center!important}@keyframes pulse{50%{box-shadow:0 0 0 5px rgba(255,255,255,.1),0 0 0 20px rgba(238,238,238,0.3000)}}@font-face{font-display:swap;font-family:'icomoon';src:url(https://pristineideas.com/wp-content/themes/jixic/assets/fonts/icomoon.eot?vdw2jk);src:url(https://pristineideas.com/wp-content/themes/jixic/assets/fonts/icomoon.eot?vdw2jk#iefix) format('embedded-opentype'),url(https://pristineideas.com/wp-content/themes/jixic/assets/fonts/icomoon.ttf?vdw2jk) format('truetype'),url(https://pristineideas.com/wp-content/themes/jixic/assets/fonts/icomoon.woff?vdw2jk) format('woff'),url(https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/https://pristineideas.com/wp-content/themes/jixic/assets/fonts/icomoon.svg?vdw2jk#icomoon) format('svg');font-weight:normal;font-style:normal}[class^="icon-"],[class*=" icon-"]{font-family:'icomoon'!important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon-down-arrow:before{content:"\e90d"}.icon-cloud:before{content:"\e940"}::-webkit-input-placeholder{/ Chrome/Opera/Safari / color:#000 !important}::-moz-placeholder{/ Firefox 19+ / color:#000 !important}::-ms-input-placeholder{/ IE 10+ / color:#000 !important}::-moz-placeholder{/ Firefox 18- / color:#000 !important}.owl-carousel{display:none;width:100%;position:relative;z-index:1}.no-js .owl-carousel{display:block}[data-aos^=fade][data-aos^=fade]{opacity:0}[data-aos=fade-right]{transform:translate3d(-100px,0,0)}.main-header .logo a img{width:160px}.main-menu .navigation>li>ul{height:auto!important;padding-top:19px!important;padding-bottom:19px!important}*{margin:0px;padding:0px;border:none;outline:none;font-size:100%}:root{--theme-color:#cc9b55;--font-family-rajdhani:'Rajdhani', sans-serif;--font-family-barlow:'Barlow Condensed', sans-serif;--anim-menu-btn-size:38px;--anim-menu-btn-icon-size:28px;--anim-menu-btn-icon-stroke:1.5px;--fs-search-btn-size:3em;--fs-search-border-bottom-width:2px}::-webkit-scrollbar{width:8px}::-webkit-scrollbar-track{-webkit-box-shadow:inset 0 0 6px #292121;background:#292121}::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.75);-webkit-box-shadow:inset 0 0 6px rgba(255,255,255,0.75)}::-webkit-scrollbar-thumb:window-inactive{background:rgba(255,255,255,0.75)}html,body{height:100%}body{color:#7e7e7e;font-size:16px;line-height:26px;font-weight:400;font-family:'Muli',sans-serif}button{border:none;background:transparent;padding:0}h2,h3{color:#1d1d1d;font-weight:700;font-family:'Montserrat',sans-serif;margin:0}h3{font-size:20px;line-height:28px;font-weight:600}a{text-decoration:none;outline:none;border:none}a{color:#1b1b1b}@media (min-width:1200px){.container{max-width:1200px}}img{max-width:100%;height:auto}ul,li{list-style:none;margin:0;padding:0}li{margin:0;padding:0}.thm-btn3{position:relative;display:inline-block;background:#24119e;padding:0 50px;color:#ffffff;font-size:16px;line-height:55px;font-weight:600;text-transform:capitalize;border-radius:30px;font-family:'Poppins',sans-serif}.sec-title-style2{position:relative;display:block;padding-bottom:49px}.sec-title-style2 .icon{position:relative;display:block;width:80px;height:80px;background:#ffffff;border-radius:30px;text-align:center;-webkit-box-shadow:0px 0px 5px 3px #f3f3f3;box-shadow:0px 0px 5px 3px #f3f3f3}.sec-title-style2 .icon.center{margin:0 auto}.sec-title-style2 .icon span:before{position:relative;display:block;font-size:40px;line-height:80px;background:-webkit-linear-gradient(#fe8604,#e83550);-webkit-background-clip:text;-webkit-text-fill-color:transparent}.sec-title-style2 .title{position:relative;display:block;padding:24px 0 0;color:#1b1b1b;font-size:36px;line-height:46px;font-weight:700;text-transform:none;font-family:'Poppins',sans-serif}.sec-title-style2 .title span{position:relative;display:inline-block}.sec-title-style2 .title span:before{position:absolute;left:0;bottom:6px;right:0;height:5px;content:"";background:#FF8B00;background:-moz-linear-gradient(left,#FF8B00 0%,#F66821 50%,#e62d57 100%);background:-webkit-linear-gradient(left,#FF8B00 0%,#F66821 50%,#e62d57 100%);background:linear-gradient(to right,#FF8B00 0%,#F66821 50%,#e62d57 100%)}.boxed_wrapper{background:#fff none repeat scroll 0 0;position:relative;margin:0 auto;width:100%;min-width:320px;min-height:400px;overflow:hidden}.scroll-top{position:fixed;right:30px;bottom:30px;width:60px;height:60px;border:2px solid #242424;background:transparent;border-radius:50%;color:#fddb4e;font-size:20px;line-height:50px;font-weight:600;text-align:center;text-transform:uppercase;display:none;-webkit-animation:pulse 2s infinite;-o-animation:pulse 2s infinite;animation:pulse 2s infinite;font-family:'Poppins',sans-serif;transform:rotate(180deg);z-index:999}.scroll-top span:before{position:relative;display:block;line-height:50px}.main-header{position:fixed;left:0px;top:0px;width:100%;background:transparent;padding-bottom:40px;z-index:99}.main-header .outer-container{position:relative;display:flex;align-items:center;flex-wrap:wrap}.main-header .logo{position:relative}.main-header .logo a.mar9-0{display:inline-block;margin:9px 0}.main-header .nav-outer{position:absolute;top:0;right:410px;z-index:99999}.main-menu{position:relative}.main-menu .navbar-collapse{padding:0px}.main-menu .navigation{position:relative;margin:0px}.main-menu .navigation>li{position:relative;float:left;margin-right:30px}.main-menu .navigation>li:last-child{margin-right:0}.main-menu .navigation>li>a{position:relative;display:block;padding:60px 0px;color:#a6a6a6;font-size:15px;line-height:20px;font-weight:500;text-transform:uppercase;letter-spacing:1px;opacity:1;font-family:'Poppins',sans-serif}.main-menu .navigation>li>ul{position:absolute;top:100%;left:inherit;width:270px;padding:23px 0;z-index:100;display:none;border-top:5px solid transparent}.main-menu .navigation>li>ul:before{position:absolute;top:0px;left:0px;width:100%;height:100%;content:'';background:#1d1d1d;z-index:-1}.main-menu .navigation>li>ul>li{position:relative;display:block;width:100%;padding:0 30px}.main-menu .navigation>li>ul>li>a{position:relative;display:block;padding:10px 0px;color:#a6a6a6;font-size:16px;font-weight:400;line-height:24px;text-align:left;letter-spacing:1px;text-transform:capitalize;font-family:'Muli',sans-serif}.main-menu .navigation>li>ul>li>a:before{position:absolute;top:20px;left:0;width:4px;height:4px;background:#ffffff;border-radius:50%;content:"";opacity:0;visibility:hidden}.navbar-header{display:none}.sticky-header{position:fixed;opacity:0;visibility:hidden;left:0px;top:0px;width:100%;padding:0px 0px;background:#ffffff;z-index:0}.sticky-header .logo{position:relative;display:block;padding:22px 0 23px}.sticky-header .logo a{display:inline-block}.working-style1-area{position:relative;display:block;padding:0px 0 150px;z-index:1}.working-style1-area .layer-outer{position:absolute;top:0;bottom:0px;right:0;width:100%;z-index:-1}.working-style1-area .layer-shape1{position:absolute;left:0px;top:-145px;width:483px;height:1000px;background-image:url(https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://pristineideas.com/wp-content/themes/jixic/assets/images/shape/working-style1-shape-bg.png);background-repeat:no-repeat;background-position:top left}.single-working-box-style1{position:relative;display:block;max-width:370px;width:100%;margin:0 auto;background:transparent}.single-working-box-style1 .img-holder{position:relative;display:block}.single-working-box-style1 .img-holder img{border-radius:15px;width:100%}.single-working-box-style1 .overlay{position:absolute;top:20px;left:0px;bottom:0px;right:0px;opacity:0;text-align:center;z-index:1}.single-working-box-style1 .overlay:before{position:absolute;content:'';top:0px;left:0px;width:100%;height:0px;border-radius:15px;background-color:#ffffff;z-index:-1}.single-working-box-style1 .overlay .box{display:table;width:100%;height:100%}.single-working-box-style1 .overlay .box .title{display:table-cell;vertical-align:bottom;padding-bottom:23px;opacity:1;transform:rotateY(90deg)}.single-working-box-style1 .overlay .box .title span{color:#e62c58;font-size:16px;font-weight:400}.single-working-box-style1 .overlay .box .title h3{font-size:20px;line-height:28px;font-weight:600;margin:3px 0 0;font-family:'Poppins',sans-serif}.single-working-box-style1 .overlay .box .title h3 a{color:#1b1b1b}.single-working-box-style1 .overlay-image-box{position:absolute;top:0px;left:20px;bottom:0px;right:20px;height:295px;border-radius:15px;text-align:center;opacity:0;transform:perspective(400px) rotateX(-90deg);transform-origin:top;z-index:2}.single-working-box-style1 .overlay-image-box:before{position:absolute;top:0px;left:0px;right:0;width:330px;height:0px;border-radius:15px;background-color:rgba(37,16,158,0.90);content:'';z-index:1}.single-working-box-style1 .overlay-image-box img{border-radius:15px}.working-style1-area .bottom-text{position:relative;display:block;max-width:800px;width:100%;margin:43px auto 0}.working-style1-area .bottom-text p{font-size:18px;line-height:28px;margin:0 0 22px}.main-header.style4{position:relative;left:0px;top:0px;width:100%;background:transparent;padding-bottom:0px;z-index:9999999}.sticky-header .main-menu.style3 .navigation>li>a{padding:35px 0px}.header-upper-style4{position:relative;display:block;background:transparent;max-width:1700px;padding:0 10px;margin:0 auto}.header-upper-style4 .outer-container{position:relative;display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between}.header-upper-style4 .header-upper-left{position:relative;display:block;max-width:520px;width:100%}.header-upper-style4 .header-upper-left .logo{position:relative;display:block}.header-upper-style4 .header-upper-left .logo a{display:inline-block}.header-upper-style4 .header-upper-middle{position:relative;display:block;max-width:660px;width:100%}.header-upper-style4 .header-upper-middle .nav-outer{position:relative;top:0;right:0;left:0;bottom:0}.header-upper-style4 .nav-outer .main-menu.style3{position:relative;display:inline-block;float:left}.main-menu.style3 .navigation>li{position:relative;float:left;margin-right:40px}.main-menu.style3 .navigation>li:last-child{margin-right:0}.main-menu.style3 .navigation>li>a{padding:60px 0px;color:#ffffff;font-size:16px;line-height:20px;font-weight:600;text-transform:capitalize;letter-spacing:0;font-family:'Poppins',sans-serif}@media only screen and (max-width:1920px){.main-header .nav-outer{right:470px}}@media only screen and (max-width:1800px){.main-header .nav-outer{right:390px}}@media only screen and (max-width:1700px){.main-header .nav-outer{right:360px}}@media only screen and (max-width:1650px){.main-header .nav-outer{right:320px}}@media only screen and (max-width:1600px){.main-header .nav-outer{right:310px}}@media only screen and (max-width:1560px){.main-header .nav-outer{right:275px}}@media only screen and (max-width:1500px){.main-header .nav-outer{right:260px}}@media only screen and (max-width:1450px){.main-header .nav-outer{right:235px}}@media only screen and (max-width:1401px){.main-header .nav-outer{right:215px}}@media only screen and (max-width:1399px){.main-header .nav-outer{right:210px}}@media only screen and (max-width:1349px){.main-header .nav-outer{right:180px}}@media only screen and (max-width:1301px){.main-header .nav-outer{right:160px}}@media only screen and (max-width:1250px){.main-header .nav-outer{right:135px}}@media only screen and (max-width:1200px){.main-header .nav-outer{right:115px}}@media only screen and (min-width:992px) and (max-width:1199px){.header-upper-style4 .header-upper-left{max-width:200px}.header-upper-style4 .header-upper-middle{max-width:500px}.main-menu.style3 .navigation>li{margin-right:15px}}@media only screen and (min-width:768px) and (max-width:991px){.main-header.style4{background:#111111;padding-bottom:0px}.header-upper-style4 .header-upper-left{position:absolute;top:0;left:25px;width:200px;max-width:initial;margin:24px 0 25px;z-index:999999}.header-upper-style4 .header-upper-middle{max-width:100%}}@media only screen and (max-width:767px){.sec-title-style2 .title br{display:none}.main-header.style4{background:#111111;padding-bottom:0px}.header-upper-style4 .header-upper-left{position:absolute;top:0;left:0px;width:200px;max-width:initial;margin:24px 0 25px;z-index:999999}.header-upper-style4 .header-upper-middle{max-width:100%}}@media only screen and (max-width:991px){.main-header .main-menu{position:relative;display:block;width:100%;float:none}.main-menu .navbar-header{position:relative;display:block;float:none;text-align:left;width:100%;min-height:90px;top:0px;z-index:12}.main-menu .navbar-header .navbar-toggle{position:absolute;top:0;right:0;display:inline-block;z-index:7;float:right;padding:4px 5px;margin:24px 0;border-radius:0px;background:#1d1d1d;margin-right:25px}.main-menu .navbar-header .navbar-toggle .icon-bar{background:#ffffff;height:2px;width:29px;display:block;margin:7px 5px}.main-menu .collapse{max-height:350px;max-width:none;overflow:auto;float:none;width:100%;padding:0px 0px 0px;border:none;margin:0px;border-radius:0px;box-shadow:none}.main-menu .navbar-collapse{max-height:350px}.main-menu .navbar-collapse>.navigation{float:none!important;margin:0px!important;width:100%!important;background:#1d1d1d;border:0px solid #ffffff;border-top:none}.main-menu .navbar-collapse>.navigation>li{position:relative;display:block;width:100%;margin:0px!important;float:none!important}.main-menu .navbar-collapse>.navigation>li,.main-menu .navbar-collapse>.navigation>li>ul>li{border-top:1px solid rgba(40,40,40,0.99)!important;opacity:1!important;top:0px!important;padding-top:0;padding-bottom:0;left:0px!important;visibility:visible!important;border-bottom:none}.main-menu .navbar-collapse>.navigation>li:first-child{border:none}.main-menu .navbar-collapse>.navigation>li>a,.main-menu .navbar-collapse>.navigation>li>ul>li>a{padding:10px 20px 8px!important;line-height:24px;color:#ffffff;text-align:left;min-height:0px}.main-menu .navbar-collapse>.navigation>li>ul{position:relative;border:none;float:none;visibility:visible;opacity:1;display:none;margin:0px;padding:0px;left:auto!important;right:auto!important;top:auto!important;width:100%;background:#131313;-webkit-border-radius:0px;-ms-border-radius:0px;-o-border-radius:0px;-moz-border-radius:0px;border-radius:0px;box-shadow:none!important}.main-menu .navbar-collapse>.navigation>li>ul:before{display:none}.main-menu .navbar-collapse>.navigation>li>ul>li>a:before,.main-menu .navbar-collapse>.navigation>li>ul>li>a:after{display:none}.main-menu .navigation>li>a:before{display:none}}@media only screen and (max-width:777px){.main-header{position:relative;background:#1723d9;padding-bottom:40px}}@media only screen and (min-width:1200px) and (max-width:1720px){.header-upper-style4 .header-upper-left{max-width:320px}.header-upper-style4 .header-upper-middle{max-width:490px}.main-menu.style3 .navigation>li{margin-right:15px}}@media only screen and (max-width:767px){.sec-title-style2 .title{z-index:99}}@font-face{font-family:elementskit;src:url(https://pristineideas.com/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/fonts/elementskit.woff?y24e1e) format("woff");font-weight:400;font-style:normal;font-display:swap}.icon,.icon::before{font-family:elementskit!important;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.icon.icon-cloud::before{content:"\eaf8"}.elementor-screen-only{position:absolute;top:-10000em;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}.elementor{-webkit-hyphens:manual;-ms-hyphens:manual;hyphens:manual}.elementor *,.elementor :after,.elementor :before{-webkit-box-sizing:border-box;box-sizing:border-box}.elementor a{-webkit-box-shadow:none;box-shadow:none;text-decoration:none}.elementor img{height:auto;max-width:100%;border:none;border-radius:0;-webkit-box-shadow:none;box-shadow:none}.elementor-element{--flex-direction:initial;--flex-wrap:initial;--justify-content:initial;--align-items:initial;--align-content:initial;--gap:initial;--flex-basis:initial;--flex-grow:initial;--flex-shrink:initial;--order:initial;--align-self:initial;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:var(--flex-direction);flex-direction:var(--flex-direction);-ms-flex-wrap:var(--flex-wrap);flex-wrap:var(--flex-wrap);-webkit-box-pack:var(--justify-content);-ms-flex-pack:var(--justify-content);justify-content:var(--justify-content);-webkit-box-align:var(--align-items);-ms-flex-align:var(--align-items);align-items:var(--align-items);-ms-flex-line-pack:var(--align-content);align-content:var(--align-content);gap:var(--gap);-ms-flex-preferred-size:var(--flex-basis);flex-basis:var(--flex-basis);-webkit-box-flex:var(--flex-grow);-ms-flex-positive:var(--flex-grow);flex-grow:var(--flex-grow);-ms-flex-negative:var(--flex-shrink);flex-shrink:var(--flex-shrink);-webkit-box-ordinal-group:var(--order);-ms-flex-order:var(--order);order:var(--order);-ms-flex-item-align:var(--align-self);align-self:var(--align-self)}:root{--page-title-display:block}.elementor-section{position:relative}.elementor-section .elementor-container{display:-webkit-box;display:-ms-flexbox;display:flex;margin-right:auto;margin-left:auto;position:relative}@media (max-width:1024px){.elementor-section .elementor-container{-ms-flex-wrap:wrap;flex-wrap:wrap}}.elementor-section.elementor-section-boxed>.elementor-container{max-width:1140px}.elementor-widget-wrap{position:relative;width:100%;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:start;align-content:flex-start}.elementor:not(.elementor-bc-flex-widget) .elementor-widget-wrap{display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-widget-wrap>.elementor-element{width:100%}.elementor-widget{position:relative}.elementor-widget:not(:last-child){margin-bottom:20px}.elementor-column{min-height:1px}.elementor-column{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-column-gap-default>.elementor-column>.elementor-element-populated{padding:10px}@media (min-width:768px){.elementor-column.elementor-col-50{width:50%}.elementor-column.elementor-col-100{width:100%}}@media (max-width:767px){.elementor-column{width:100%}}@media (min-width:1025px){#elementor-device-mode:after{content:"desktop"}}@media (min-width:-1px){#elementor-device-mode:after{content:"widescreen"}}@media (max-width:-1px){#elementor-device-mode:after{content:"laptop";content:"tablet_extra"}}@media (max-width:1024px){#elementor-device-mode:after{content:"tablet"}}@media (max-width:-1px){#elementor-device-mode:after{content:"mobile_extra"}}@media (max-width:767px){#elementor-device-mode:after{content:"mobile"}}@media (max-width:767px){.elementor .elementor-hidden-mobile{display:none}}@media (min-width:768px) and (max-width:1024px){.elementor .elementor-hidden-tablet{display:none}}@media (min-width:1025px) and (max-width:99999px){.elementor .elementor-hidden-desktop{display:none}}.elementor-kit-5034{--e-global-color-primary:#6EC1E4;--e-global-color-secondary:#54595F;--e-global-color-text:#7A7A7A;--e-global-color-accent:#61CE70;--e-global-typography-primary-font-family:"Roboto";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"Roboto Slab";--e-global-typography-secondary-font-weight:400;--e-global-typography-text-font-family:"Roboto";--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Roboto";--e-global-typography-accent-font-weight:500}.elementor-section.elementor-section-boxed>.elementor-container{max-width:1140px}.elementor-widget:not(:last-child){margin-bottom:20px}.elementor-element{--widgets-spacing:20px}@media (max-width:1024px){.elementor-section.elementor-section-boxed>.elementor-container{max-width:1024px}}@media (max-width:767px){.elementor-section.elementor-section-boxed>.elementor-container{max-width:767px}}.stratum-advanced-google-map{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.stratum-advanced-google-map .stratum-advanced-google-map__container{width:100%}.stratum-advanced-google-map .stratum-advanced-google-map__container{height:600px}.elementor-widget-heading .elementor-heading-title{color:var(--e-global-color-primary);font-family:var(--e-global-typography-primary-font-family),Sans-serif;font-weight:var(--e-global-typography-primary-font-weight)}.elementor-widget-text-editor{color:var(--e-global-color-text);font-family:var(--e-global-typography-text-font-family),Sans-serif;font-weight:var(--e-global-typography-text-font-weight)}.elementor-6849 .elementor-element.elementor-element-17617cf>.elementor-container{max-width:1300px}.elementor-6849 .elementor-element.elementor-element-17617cf{margin-top:120px;margin-bottom:0px}.elementor-6849 .elementor-element.elementor-element-74cda9d.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated{align-content:center;align-items:center}.elementor-6849 .elementor-element.elementor-element-a604cdd{text-align:left}.elementor-6849 .elementor-element.elementor-element-a604cdd .elementor-heading-title{color:#000000;font-size:55px;font-weight:600}.elementor-6849 .elementor-element.elementor-element-48f46ac{text-align:justify;font-family:"Roboto",Sans-serif;font-size:18px;font-weight:400;line-height:35px}.elementor-6849 .elementor-element.elementor-element-7dc7022.elementor-column.elementor-element[data-element_type="column"]>.elementor-widget-wrap.elementor-element-populated{align-content:center;align-items:center}.elementor-6849 .elementor-element.elementor-element-4f60e90>.elementor-container{max-width:1300px}.elementor-6849 .elementor-element.elementor-element-4f60e90{margin-top:0px;margin-bottom:0px}.elementor-6849 .elementor-element.elementor-element-7195bc6{text-align:justify;font-family:"Roboto",Sans-serif;font-size:18px;font-weight:400;line-height:35px}.elementor-6849 .elementor-element.elementor-element-eabf582{margin-top:100px;margin-bottom:0px}.elementor-6849 .elementor-element.elementor-element-9959a90 .stratum-advanced-google-map__container{height:480px}@media (min-width:768px){.elementor-6849 .elementor-element.elementor-element-74cda9d{width:44%}.elementor-6849 .elementor-element.elementor-element-7dc7022{width:55.962%}}:focus{outline:0}button::-moz-focus-inner{padding:0;border:0}.ekit-wid-con .ekit-review-card--date,.ekit-wid-con .ekit-review-card--desc{grid-area:date}.ekit-wid-con .ekit-review-card--image{width:60px;height:60px;grid-area:thumbnail;min-width:60px;border-radius:50%;background-color:#eae9f7;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:1rem;position:relative}.ekit-wid-con .ekit-review-card--thumbnail{grid-area:thumbnail;padding-right:1rem}.ekit-wid-con .ekit-review-card--name{grid-area:name;font-size:14px;font-weight:700;margin:0 0 .25rem 0}.ekit-wid-con .ekit-review-card--stars{grid-area:stars;color:#f4be28;font-size:13px;line-height:20px}.ekit-wid-con .ekit-review-card--comment{grid-area:comment;font-size:16px;line-height:22px;font-weight:400;color:#32323d}.ekit-wid-con .ekit-review-card--actions{grid-area:actions}.ekit-wid-con .ekit-review-card--posted-on{display:-webkit-box;display:-ms-flexbox;display:flex;grid-area:posted-on}:root{--swiper-theme-color:#007aff}:root{--swiper-navigation-size:44px}:root{--jp-carousel-primary-color:#fff;--jp-carousel-primary-subtle-color:#999;--jp-carousel-bg-color:#000;--jp-carousel-bg-faded-color:#222;--jp-carousel-border-color:#3a3a3a}</style>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//v0.wordpress.com' />
+<link rel='dns-prefetch' href='//c0.wp.com' />
+<link rel='dns-prefetch' href='//i0.wp.com' />
+<link rel='dns-prefetch' href='//ml6fbe2m5c0r.i.optimole.com' />
+<link rel='preconnect' href='https://ml6fbe2m5c0r.i.optimole.com' />
+<link rel="alternate" type="application/rss+xml" title="Pristine Ideas &raquo; Feed" href="https://pristineideas.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Pristine Ideas &raquo; Comments Feed" href="https://pristineideas.com/comments/feed/" />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/pristineideas.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.1.1"}};
+/*! This file is auto-generated */
+!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode,e=(p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0),i.toDataURL());return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(p&&p.fillText)switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([129777,127995,8205,129778,127999],[129777,127995,8203,129778,127999])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(e=t.source||{}).concatemoji?c(e.concatemoji):e.wpemoji&&e.twemoji&&(c(e.twemoji),c(e.wpemoji)))}(window,document,window._wpemojiSettings);
+</script>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=1669014021' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=1669014021' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/css/classic-themes.min.css?ver=1669014021' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://fonts.googleapis.com/css?family=Montserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CPoppins%3A200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CMuli%3A300%2C400%2C600%2C700%2C800%2C900%7CKnewave%7CPlayfair+Display%3A400%2C700%2C900&#038;subset=latin%2Clatin-ext&#038;ver=6.1.1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/animate.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/themes/jixic/assets/css/bootstrap.min.css?ver=6.1.1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/themes/jixic/assets/css/bootstrap-select.min.css?ver=6.1.1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/custom-animate.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/font-awesome.min.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/icomoon.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/imp.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/jquery.bootstrap-touchspin.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/themes/jixic/assets/css/jquery.fancybox.min.css?ver=6.1.1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/owl.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/owl.theme.default.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/themes/jixic/assets/css/jquery.mCustomScrollbar.min.css?ver=6.1.1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/slick.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/aos.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/themes/jixic/assets/css/swiper.min.css?ver=6.1.1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/flaticon.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/nouislider.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/nouislider.pips.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/timePicker.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/jquery-ui.css?ver=1664522841' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/polyglot-language-switcher.css?ver=1664522841' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/energy-icon.css?ver=1664522841' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/woocommerce.css?ver=1664522841' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/custom.css?ver=1664522841' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/style.css?ver=1664522842' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/tut.css?ver=1664522844' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/gutenberg.css?ver=1664522844' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/responsive.css?ver=1664522845' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=1664522846' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<style id='optm_lazyload_noscript_style-inline-css' type='text/css'>
+html.optml_no_js img[data-opt-src] { display: none !important; } 
+ html .elementor-section[data-settings*="background_background"]:not(.optml-bg-lazyloaded),
+html .elementor-section > .elementor-background-overlay:not(.optml-bg-lazyloaded),
+html .wp-block-cover[style*="background-image"]:not(.optml-bg-lazyloaded),
+html .elementor-widget-container:not(.optml-bg-lazyloaded),
+html .elementor-background-slideshow__slide__image:not(.optml-bg-lazyloaded) { background-image: none !important; } 
+</style>
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=1664522840' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.6.6' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/uploads/elementor/css/post-5034.css?ver=1663919958' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/plugins/stratum/assets/css/style.min.css?ver=1.3.13' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.7.2' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/uploads/elementor/css/global.css?ver=1663919968' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/uploads/elementor/css/post-5907.css?ver=1664561258' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=1664522846' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=1664522846' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.1.1' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link data-minify="1" rel='preload'  href='https://pristineideas.com/wp-content/cache/min/1/p/jetpack/11.3.1/css/jetpack.css?ver=1664522846' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<script type='text/javascript' id='jquery-core-js-extra'>
+/* <![CDATA[ */
+var jixic_data = {"ajaxurl":"https:\/\/pristineideas.com\/wp-admin\/admin-ajax.php","nonce":"3986e5bd3f"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://c0.wp.com/c/6.1.1/wp-includes/js/jquery/jquery.min.js' id='jquery-core-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/jquery/jquery-migrate.min.js?ver=1669014022' id='jquery-migrate-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='optml-print-js-after'>
+			(function(w, d){
+					w.addEventListener("beforeprint", function(){
+						let images = d.getElementsByTagName( "img" );
+							for (let img of images) {
+								if ( !img.dataset.optSrc) {
+									continue;
+								}
+								img.src = img.dataset.optSrc;
+								delete img.dataset.optSrc;
+							}
+					});
+			
+			}(window, document));
+								 
+</script>
+<link rel="https://api.w.org/" href="https://pristineideas.com/wp-json/" /><link rel="alternate" type="application/json" href="https://pristineideas.com/wp-json/wp/v2/pages/5907" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://pristineideas.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://pristineideas.com/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.1.1" />
+<link rel="canonical" href="https://pristineideas.com/website-development/" />
+<link rel='shortlink' href='https://wp.me/PefLPI-1xh' />
+<link rel="alternate" type="application/json+oembed" href="https://pristineideas.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpristineideas.com%2Fwebsite-development%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://pristineideas.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpristineideas.com%2Fwebsite-development%2F&#038;format=xml" />
+<script type="rocketlazyloadscript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-98999873-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Facebook Pixel Code -->
+<script type="rocketlazyloadscript">
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '498340283883802');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=498340283883802&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<script type="rocketlazyloadscript">
+  fbq('track', 'Search', {
+    search_string: 'Branding Agency',
+    content_ids: '1234',
+    content_type: 'product',
+  });
+</script>
+
+<script type="rocketlazyloadscript" data-minify="1" src="https://pristineideas.com/wp-content/cache/min/1/bootstrap/3.3.7/js/bootstrap.min.js?ver=1664522846" crossorigin="anonymous" defer></script>
+<style>img#wpstats{display:none}</style>
+	<meta name="description" content="Website Development Your website is your portal to the global world. We promise to create a portal that materialises your values and bring them out online through every page of your website. Working with the colours and visuals that suit your taste, we combine it with the power of good writing to create an impactful,&hellip;" />
+			<style type="text/css">
+				/* If html does not have either class, do not show lazy loaded images. */
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+			<script>
+				document.documentElement.classList.add(
+					'jetpack-lazy-images-js-enabled'
+				);
+			</script>
+		<meta name="generator" content="Optimole 3.4.6">
+		<style type="text/css">
+			img[data-opt-src]:not([data-opt-lazy-loaded]) {
+				transition: .2s filter linear, .2s opacity linear, .2s border-radius linear;
+				-webkit-transition: .2s filter linear, .2s opacity linear, .2s border-radius linear;
+				-moz-transition: .2s filter linear, .2s opacity linear, .2s border-radius linear;
+				-o-transition: .2s filter linear, .2s opacity linear, .2s border-radius linear;
+			}
+			img[data-opt-src]:not([data-opt-lazy-loaded]) {
+					opacity: .75;
+					-webkit-filter: blur(8px);
+					-moz-filter: blur(8px);
+					-o-filter: blur(8px);
+					-ms-filter: blur(8px);
+					filter: blur(8px);
+					transform: scale(1.04);
+					animation: 0.1s ease-in;
+					-webkit-transform: translate3d(0, 0, 0);
+			}
+			/** optmliframelazyloadplaceholder */
+		</style>
+		<script type="rocketlazyloadscript" data-rocket-type="application/javascript">
+					document.documentElement.className = document.documentElement.className.replace(/\boptml_no_js\b/g, "");
+						(function(w, d){
+							var b = d.getElementsByTagName("head")[0];
+							var s = d.createElement("script");
+							var v = ("IntersectionObserver" in w && "isIntersecting" in w.IntersectionObserverEntry.prototype) ? "_no_poly" : "";
+							s.async = true;
+							s.src = "https://ml6fbe2m5c0r.i.optimole.com/js-lib/v2/latest/optimole_lib" + v  + ".min.js";
+							b.appendChild(s);
+							w.optimoleData = {
+								lazyloadOnly: "optimole-lazy-only",
+								backgroundReplaceClasses: [],
+								nativeLazyload : false,
+								scalingDisabled: false,
+								watchClasses: [],
+								backgroundLazySelectors: ".elementor-section[data-settings*=\"background_background\"], .elementor-section > .elementor-background-overlay, .wp-block-cover[style*=\"background-image\"], .elementor-widget-container, .elementor-background-slideshow__slide__image",
+								network_optimizations: true,
+								ignoreDpr: true,
+								quality: 0
+							}
+						}(window, document));
+					document.addEventListener( "DOMContentLoaded", function() {
+																		
+																		if ( "loading" in HTMLImageElement.prototype && Object.prototype.hasOwnProperty.call( optimoleData, "nativeLazyload" ) && optimoleData.nativeLazyload === true ) {
+																			const images = document.querySelectorAll('img[loading="lazy"]');
+																					images.forEach( function (img) {
+																						if ( !img.dataset.optSrc) {
+																							return;
+																						}
+																						img.src = img.dataset.optSrc;
+																						delete img.dataset.optSrc;
+																					 });
+																		}
+																	} );
+		</script><link rel="icon" href="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/09/cropped-pristine-fav1.png?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/09/cropped-pristine-fav1.png?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/09/cropped-pristine-fav1.png?fit=180%2C180&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/09/cropped-pristine-fav1.png?fit=270%2C270&#038;ssl=1" />
+<link rel="preload" type="text/css"  href="https://pristineideas.com/?custom-css=aa82b02611" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  /><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript><script type="rocketlazyloadscript">
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+</script></head>
+
+
+<body class="page-template page-template-elementor_header_footer page page-id-5907 menu-layer elementor-default elementor-template-full-width elementor-kit-5034 elementor-page elementor-page-5907"> 
+
+
+
+<div class="boxed_wrapper">
+
+	
+    <!-- main header -->
+    <header class="main-header style4">
+        <!--Start Header upper style2-->
+        <div class="header-upper-style4">
+            <div class="outer-container clearfix">
+               
+                <div class="header-upper-left clearfix">
+                    <div class="logo">
+                        <a href="https://pristineideas.com/" title="Pristine Ideas" class="mar9-0"><img width="167" height="145" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20167%20145'%3E%3C/svg%3E" alt="logo" style=" width:150px;" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://pristineideas.com/wp-content/uploads/2022/06/Pristine-Logo-360.png" /><noscript><img decoding=async  width="167" height="145" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:167/h:145/q:mauto/f:avif/https://pristineideas.com/wp-content/uploads/2022/06/Pristine-Logo-360.png" alt="logo" style=" width:150px;" /></noscript></a>                    </div>
+                </div>
+                
+                <div class="header-upper-middle clearfix">
+                    <div class="nav-outer clearfix">
+                        <!-- Main Menu -->
+                        <nav class="main-menu style3 navbar-expand-lg">
+                            <div class="navbar-header">
+                                <!-- Toggle Button -->      
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+    
+                            <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                <ul class="navigation clearfix">
+                                    <li id="menu-item-5648" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5648"><a title="Home" href="https://pristineideas.com/" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Home</a></li>
+<li id="menu-item-5649" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5649"><a title="About Us" href="https://pristineideas.com/about-us/" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">About Us</a></li>
+<li id="menu-item-5652" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-5652 dropdown current"><a title="Services" href="#" data-toggle="dropdown1" class="hvr-underline-from-left1" aria-expanded="false" data-scroll data-options="easing: easeOutQuart">Services</a>
+<ul role="menu" class="submenu">
+	<li id="menu-item-6282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6282"><a title="Design" href="https://pristineideas.com/design/">Design</a></li>
+	<li id="menu-item-6281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6281"><a title="Digital Marketing" href="https://pristineideas.com/digital-marketing/">Digital Marketing</a></li>
+	<li id="menu-item-6013" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5907 current_page_item menu-item-6013 active"><a title="Website Development" href="https://pristineideas.com/website-development/">Website Development</a></li>
+	<li id="menu-item-6283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6283"><a title="Video Creation" href="https://pristineideas.com/video-creation/">Video Creation</a></li>
+	<li id="menu-item-6284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6284"><a title="Photography" href="https://pristineideas.com/photography/">Photography</a></li>
+	<li id="menu-item-6285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6285"><a title="Offline Media" href="https://pristineideas.com/offline-media/">Offline Media</a></li>
+</ul>
+</li>
+<li id="menu-item-6531" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6531"><a title="Case Studies" href="https://pristineideas.com/case-studies/" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Case Studies</a></li>
+<li id="menu-item-5651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5651"><a title="Contact" href="https://pristineideas.com/contact/" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Contact</a></li>
+<li id="menu-item-5814" class="download menu-item menu-item-type-custom menu-item-object-custom menu-item-5814"><a title="Download Portfolio" target="_blank" href="https://pristineideas.com/wp-content/uploads/2022/07/Portfolio.pdf" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Download Portfolio</a></li>
+                                </ul>
+                            </div>
+                        </nav>                        
+                        <!-- Main Menu End-->
+                                            </div>     
+                </div>
+                            </div>
+        </div>
+        <!--End Header Upper style2--> 
+        <!--Sticky Header-->
+        <div class="sticky-header">
+            <div class="container">
+                <div class="clearfix">
+                    <!--Logo-->
+                    <div class="logo float-left">
+                        <a href="https://pristineideas.com/" title="Pristine Ideas" class="mar9-0"><img width="167" height="145" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20167%20145'%3E%3C/svg%3E" alt="logo" style=" width:150px;" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://pristineideas.com/wp-content/uploads/2022/06/Pristine-Logo-360.png" /><noscript><img decoding=async  width="167" height="145" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:167/h:145/q:mauto/f:avif/https://pristineideas.com/wp-content/uploads/2022/06/Pristine-Logo-360.png" alt="logo" style=" width:150px;" /></noscript></a>                    </div>
+                    <!--Right Col-->
+                    <div class="right-col float-right">
+                        <!-- Main Menu -->
+                        <nav class="main-menu style3 navbar-expand-lg">
+                            <div class="navbar-collapse collapse clearfix">
+                                <ul class="navigation clearfix">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5648"><a title="Home" href="https://pristineideas.com/" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5649"><a title="About Us" href="https://pristineideas.com/about-us/" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">About Us</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-5652 dropdown current"><a title="Services" href="#" data-toggle="dropdown1" class="hvr-underline-from-left1" aria-expanded="false" data-scroll data-options="easing: easeOutQuart">Services</a>
+<ul role="menu" class="submenu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6282"><a title="Design" href="https://pristineideas.com/design/">Design</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6281"><a title="Digital Marketing" href="https://pristineideas.com/digital-marketing/">Digital Marketing</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-5907 current_page_item menu-item-6013 active"><a title="Website Development" href="https://pristineideas.com/website-development/">Website Development</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6283"><a title="Video Creation" href="https://pristineideas.com/video-creation/">Video Creation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6284"><a title="Photography" href="https://pristineideas.com/photography/">Photography</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6285"><a title="Offline Media" href="https://pristineideas.com/offline-media/">Offline Media</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6531"><a title="Case Studies" href="https://pristineideas.com/case-studies/" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Case Studies</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5651"><a title="Contact" href="https://pristineideas.com/contact/" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Contact</a></li>
+<li class="download menu-item menu-item-type-custom menu-item-object-custom menu-item-5814"><a title="Download Portfolio" target="_blank" href="https://pristineideas.com/wp-content/uploads/2022/07/Portfolio.pdf" class="hvr-underline-from-left1" data-scroll data-options="easing: easeOutQuart">Download Portfolio</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Sticky Header-->
+    </header> 			<div data-elementor-type="wp-page" data-elementor-id="5907" class="elementor elementor-5907">
+									<section class="elementor-section elementor-top-section elementor-element elementor-element-6b059f1 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="6b059f1" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-52489a9" data-id="52489a9" data-element_type="column">
+			<div class="elementor-widget-wrap">
+									</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-17617cf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="17617cf" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-74cda9d" data-id="74cda9d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-a604cdd elementor-widget elementor-widget-heading" data-id="a604cdd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.6 - 08-06-2022 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h2 class="elementor-heading-title elementor-size-default">Website Development</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-48f46ac elementor-widget elementor-widget-text-editor" data-id="48f46ac" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.6 - 08-06-2022 */
+.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#818a91;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#818a91;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				Your website is your portal to the global world. We promise to create a portal that materialises your values and bring them out online through every page of your website. Working with the colours and visuals that suit your taste, we combine it with the power of good writing to create an impactful, yet outgoing website. 
+
+We create and handle efficient and innovative websites optimised using the most versatile SEO and conversion strategies. With a deep understanding of craft making and ingenuity, we make the idea of your website come to full bloom and reach its zenith. We ensure that your website is an all-encompassing platform that makes a global impact across all your verticals.						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7dc7022" data-id="7dc7022" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-01329bd elementor-widget elementor-widget-image" data-id="01329bd" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+			<style>/*! elementor - v3.6.6 - 08-06-2022 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style>												<img decoding="async" width="2560" height="1620" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:2000/h:1266/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Website-Development-scaled.jpg?fit=2560%2C1620&amp;ssl=1" class="attachment-full size-full jetpack-lazy-image" alt data-lazy-srcset="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:2000/h:1266/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Website-Development-scaled.jpg?w=2560&amp;ssl=1 2560w, https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:2000/h:1266/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Website-Development-scaled.jpg?w=1050&amp;ssl=1 1050w, https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:2000/h:1266/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Website-Development-scaled.jpg?w=1575&amp;ssl=1 1575w" data-lazy-sizes="(max-width: 525px) 100vw, 525px" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:2000/h:1266/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Website-Development-scaled.jpg?fit=2560%2C1620&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">															</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-a21d18c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a21d18c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-65a8193" data-id="65a8193" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-110490b elementor-widget elementor-widget-text-editor" data-id="110490b" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+							<p><span style="font-size: 18px; color: var( --e-global-color-text );">Our services in this domain range from website development, to optimisation strategies to auditing and much more. To deliver a seamless online presence to you and the most joyful user interface to your audience, we stay at par with all the digital and technical standards</span></p>						</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-eabf582 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="eabf582" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-bcfff46" data-id="bcfff46" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-fbc4b15 elementor-widget elementor-widget-jixic_featured_works" data-id="fbc4b15" data-element_type="widget" data-widget_type="jixic_featured_works.default">
+				<div class="elementor-widget-container">
+			        
+        <!--Start Working Style1 Area-->
+        <section class="working-style1-area">
+            <div class="layer-outer">
+                <div class="layer-shape1 aos-init" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="2500"></div>
+            </div>
+            <div class="container">
+                <div class="sec-title-style2 text-center">
+                    <div class="icon center"><span class="icon icon-cloud"></span></div>
+                    <div class="title">Check out some of our <span>featured works</span> and<br> start yours today.</div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="working-style1-carousel owl-carousel owl-theme style1">
+                                                        <!--Start Single Working Box Style1-->
+                            <div class="single-working-box-style1">
+                                <div class="img-holder">
+                                    <img data-opt-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:370/h:400/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/07/gangala.jpg"  width="370" height="400" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:370/h:400/q:eco/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/07/gangala.jpg?resize=370%2C400&amp;ssl=1" class="attachment-jixic_370x400 size-jixic_370x400 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/07/gangala.jpg?resize=370%2C400&amp;ssl=1&amp;is-pending-load=1" old-srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img width="370" height="400" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:370/h:400/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/07/gangala.jpg?resize=370%2C400&amp;ssl=1" class="attachment-jixic_370x400 size-jixic_370x400 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:370/h:400/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/07/gangala.jpg?resize=370%2C400&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></noscript>                                    <div class="overlay">
+                                        <div class="box">
+                                            <div class="title">
+                                                <span>Website Development</span>
+                                                <h3><a href="Array">Gangala Website</a></h3>    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="overlay-image-box">
+                                    <img decoding="async" src alt="Awesome Image"><noscript><img data-lazy-fallback="1" decoding="async" src="" alt="Awesome Image" /></noscript>
+                                </div>   
+                            </div>
+                            <!--End Single Working Box Style1-->
+                                                        <!--Start Single Working Box Style1-->
+                            <div class="single-working-box-style1">
+                                <div class="img-holder">
+                                    <img data-opt-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:370/h:400/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/07/abrand.jpg"  width="370" height="400" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:370/h:400/q:eco/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/07/abrand.jpg?resize=370%2C400&amp;ssl=1" class="attachment-jixic_370x400 size-jixic_370x400 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/07/abrand.jpg?resize=370%2C400&amp;ssl=1&amp;is-pending-load=1" old-srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img width="370" height="400" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:370/h:400/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/07/abrand.jpg?resize=370%2C400&amp;ssl=1" class="attachment-jixic_370x400 size-jixic_370x400 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:370/h:400/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/07/abrand.jpg?resize=370%2C400&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></noscript>                                    <div class="overlay">
+                                        <div class="box">
+                                            <div class="title">
+                                                <span>Website Development</span>
+                                                <h3><a href="Array">Abrand Website</a></h3>    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="overlay-image-box">
+                                    <img decoding="async" src alt="Awesome Image"><noscript><img data-lazy-fallback="1" decoding="async" src="" alt="Awesome Image" /></noscript>
+                                </div>   
+                            </div>
+                            <!--End Single Working Box Style1-->
+                                                    </div>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="bottom-text text-center">
+                            <p>Idea of denouncing pleasure and praising pain was born &amp; we will give you a complete account system expound the actual teachings of the great explorer.</p>
+                            <a class="thm-btn3" href=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
+        <!--End Working Style1 Area-->
+        
+				</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-f975a6d elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="f975a6d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fff0311" data-id="fff0311" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+								<div class="elementor-element elementor-element-ebab97d elementor-widget elementor-widget-mdp-gmaper-elementor" data-id="ebab97d" data-element_type="widget" data-widget_type="mdp-gmaper-elementor.default">
+				<div class="elementor-widget-container">
+			        <!-- Start Gmaper for Elementor WordPress Plugin -->
+        <div class="mdp-gmaper-elementor-box"
+             data-latitude="20.75051"
+             data-longitude="73.7289906"
+             data-map-zoom = "5"
+             data-map-type = "roadmap"
+             data-fullscreen-control = "yes"
+             data-zoom-control = "yes"
+             data-streetview-control = ""
+             data-map-type-control = "yes"
+             data-scroll-wheel-zoom = ""
+             data-map-dragged = ""
+             data-markers = "[{&quot;pin_item_title&quot;:&quot;Noida&quot;,&quot;_id&quot;:&quot;e5dbcab&quot;,&quot;pin_latitude&quot;:&quot;28.5167356&quot;,&quot;pin_longitude&quot;:&quot;77.3311252&quot;,&quot;pin_item_description&quot;:&quot;Email Id : info@pristineideas.com&lt;br&gt;\nMobile No : +91 7379344441&lt;br&gt;\nMobile No : +91 9752969351&quot;,&quot;pin_icon&quot;:{&quot;url&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;,&quot;alt&quot;:&quot;&quot;,&quot;source&quot;:&quot;library&quot;},&quot;rectangular_image&quot;:&quot;&quot;,&quot;rectangular_pin_size_height&quot;:null,&quot;rectangular_pin_size_width&quot;:null,&quot;square_pin_size&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:50,&quot;sizes&quot;:[]}},{&quot;pin_item_title&quot;:&quot;Mumbai&quot;,&quot;pin_latitude&quot;:&quot;19.0821978&quot;,&quot;pin_longitude&quot;:&quot;72.7411017&quot;,&quot;pin_item_description&quot;:&quot;Email Id : info@pristineideas.com&lt;br&gt;\nMobile No : +91 7379344441&lt;br&gt;\nMobile No : +91 9752969351&quot;,&quot;_id&quot;:&quot;7d5ec14&quot;,&quot;pin_icon&quot;:{&quot;url&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;},&quot;rectangular_image&quot;:&quot;no&quot;,&quot;square_pin_size&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:50,&quot;sizes&quot;:[]},&quot;rectangular_pin_size_height&quot;:null,&quot;rectangular_pin_size_width&quot;:null},{&quot;pin_item_title&quot;:&quot;Indore&quot;,&quot;pin_latitude&quot;:&quot;22.7239575&quot;,&quot;pin_longitude&quot;:&quot;75.7938099&quot;,&quot;pin_item_description&quot;:&quot;Email Id : info@pristineideas.com&lt;br&gt;\nMobile No : +91 7379344441&lt;br&gt;\nMobile No : +91 9752969351&quot;,&quot;_id&quot;:&quot;d0bbe79&quot;,&quot;pin_icon&quot;:{&quot;url&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;},&quot;rectangular_image&quot;:&quot;no&quot;,&quot;square_pin_size&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:50,&quot;sizes&quot;:[]},&quot;rectangular_pin_size_height&quot;:null,&quot;rectangular_pin_size_width&quot;:null},{&quot;pin_item_title&quot;:&quot;Bhopal&quot;,&quot;pin_latitude&quot;:&quot;23.1993942&quot;,&quot;pin_longitude&quot;:&quot;75.7938099&quot;,&quot;pin_item_description&quot;:&quot;Email Id : info@pristineideas.com&lt;br&gt;\nMobile No : +91 7379344441&lt;br&gt;\nMobile No : +91 9752969351&quot;,&quot;_id&quot;:&quot;9cf83c7&quot;,&quot;pin_icon&quot;:{&quot;url&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;},&quot;rectangular_image&quot;:&quot;no&quot;,&quot;square_pin_size&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:50,&quot;sizes&quot;:[]},&quot;rectangular_pin_size_height&quot;:null,&quot;rectangular_pin_size_width&quot;:null}]"
+             data-info-container-always-opened = ""
+             data-info-container-open-hover = "yes"
+             data-user-geolocation = ""
+             data-show-legend = ""
+             data-custom-styles = ""
+             data-map-style = "standard"
+        >
+                        <div class="mdp-gmaper-elementor-google-map-wrapper
+                                                                        "></div>
+                    </div>
+        <!-- End Gmaper for Elementor WordPress Plugin -->
+        		</div>
+				</div>
+					</div>
+		</div>
+							</div>
+		</section>
+							</div>
+		
+<div class="clearfix"></div>
+
+	
+<!--Start Footer Style3 Area-->  
+<footer class="footer-style3-area">
+    <div class="auto-container">
+        <div class="footer-style3-bg"  style="background-image:url();"></div>
+        <div class="container">
+            <div class="row">
+                <div class="footer-column col-xl-6 col-lg-6 col-md-12 col-sm-12 wow fadeInUp"><div id="jixic_start_your_projects-1" class="single-footer-widget-style3 footer-widget widget_jixic_start_your_projects">		
+        <!-- Service List Box -->
+        <div class="title"><h3>Start your Project</h3></div>    
+        <div class="project-content">
+            <h2>Do you want to work with us? mail us<br> <a href="mailto:http://info@pristineideas.com">info@pristineideas.com</a></h2>
+            <ul class="clearfix">
+                        
+           	<!-- Title -->
+                        <li class="wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1200ms"> 
+                <div class="img-holder">
+                    <img data-opt-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Kanha-Ruask.jpg"  width="98" height="98" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:eco/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Kanha-Ruask.jpg?resize=98%2C98&amp;ssl=1" class="attachment-jixic_98x98 size-jixic_98x98 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Kanha-Ruask.jpg?resize=98%2C98&amp;ssl=1&amp;is-pending-load=1" old-srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img width="98" height="98" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Kanha-Ruask.jpg?resize=98%2C98&amp;ssl=1" class="attachment-jixic_98x98 size-jixic_98x98 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Kanha-Ruask.jpg?resize=98%2C98&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></noscript>                    <div class="overlay-style-one">
+                        <div class="box">
+                            <div class="inner">
+                                <a href="https://www.youtube.com/watch?v=gfDOkoQJf28"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </li>
+            
+                        <li class="wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1200ms"> 
+                <div class="img-holder">
+                    <img data-opt-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/essel-bath.jpg"  width="98" height="98" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:eco/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/essel-bath.jpg?resize=98%2C98&amp;ssl=1" class="attachment-jixic_98x98 size-jixic_98x98 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/essel-bath.jpg?resize=98%2C98&amp;ssl=1&amp;is-pending-load=1" old-srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img width="98" height="98" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/essel-bath.jpg?resize=98%2C98&amp;ssl=1" class="attachment-jixic_98x98 size-jixic_98x98 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/essel-bath.jpg?resize=98%2C98&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></noscript>                    <div class="overlay-style-one">
+                        <div class="box">
+                            <div class="inner">
+                                <a href="https://www.youtube.com/shorts/f_TaEIczOkg"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </li>
+            
+                        <li class="wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1200ms"> 
+                <div class="img-holder">
+                    <img data-opt-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/eggs-and-eggs-1.jpg"  width="98" height="98" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:eco/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/eggs-and-eggs-1.jpg?resize=98%2C98&amp;ssl=1" class="attachment-jixic_98x98 size-jixic_98x98 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/eggs-and-eggs-1.jpg?resize=98%2C98&amp;ssl=1&amp;is-pending-load=1" old-srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img width="98" height="98" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/eggs-and-eggs-1.jpg?resize=98%2C98&amp;ssl=1" class="attachment-jixic_98x98 size-jixic_98x98 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/eggs-and-eggs-1.jpg?resize=98%2C98&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></noscript>                    <div class="overlay-style-one">
+                        <div class="box">
+                            <div class="inner">
+                                <a href="https://www.youtube.com/watch?v=VeWYBUvxOJ8"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </li>
+            
+                        <li class="wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1200ms"> 
+                <div class="img-holder">
+                    <img data-opt-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Tansukh-Atta.jpg"  width="98" height="98" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:eco/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Tansukh-Atta.jpg?resize=98%2C98&amp;ssl=1" class="attachment-jixic_98x98 size-jixic_98x98 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Tansukh-Atta.jpg?resize=98%2C98&amp;ssl=1&amp;is-pending-load=1" old-srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img width="98" height="98" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Tansukh-Atta.jpg?resize=98%2C98&amp;ssl=1" class="attachment-jixic_98x98 size-jixic_98x98 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/Tansukh-Atta.jpg?resize=98%2C98&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></noscript>                    <div class="overlay-style-one">
+                        <div class="box">
+                            <div class="inner">
+                                <a href="https://www.youtube.com/watch?v=X17hSEgK1q8"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </li>
+            
+                        <li class="wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1200ms"> 
+                <div class="img-holder">
+                    <img data-opt-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/master-builders.jpg"  width="98" height="98" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:eco/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/master-builders.jpg?resize=98%2C98&amp;ssl=1" class="attachment-jixic_98x98 size-jixic_98x98 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:auto/h:auto/q:mauto/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/master-builders.jpg?resize=98%2C98&amp;ssl=1&amp;is-pending-load=1" old-srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><noscript><img width="98" height="98" src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/master-builders.jpg?resize=98%2C98&amp;ssl=1" class="attachment-jixic_98x98 size-jixic_98x98 wp-post-image jetpack-lazy-image" alt decoding="async" data-lazy-src="https://ml6fbe2m5c0r.i.optimole.com/cb:Ps8G.219e9/w:98/h:98/q:mauto/rt:fill/g:ce/f:avif/https://i0.wp.com/pristineideas.com/wp-content/uploads/2022/08/master-builders.jpg?resize=98%2C98&amp;ssl=1&amp;is-pending-load=1" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></noscript>                    <div class="overlay-style-one">
+                        <div class="box">
+                            <div class="inner">
+                                <a href="https://www.youtube.com/shorts/njg232BZSEg"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </li>
+            
+                            
+                    </ul>
+        </div>
+		
+        </div></div><div class="footer-column col-xl-6 col-lg-6 col-md-12 col-sm-12 wow fadeInUp"><div id="jixic_get_in_touch-1" class="single-footer-widget-style3 footer-widget widget_jixic_get_in_touch">      		
+			<!--Footer Column-->
+            <div class="project-style martop40">
+                <div class="title"><h3>Get in Touch</h3></div>                <div class="subscribe-box">
+                    <div class="text">
+                        <p></p>
+                        <p>+91 7379344441 <br> +91 9752969351</p>
+                    </div>
+                    <form class="subscribe-form" action="http://feedburner.google.com/fb/a/mailverify" accept-charset="utf-8">
+                        <input type="hidden" id="uri6" name="uri" value="">
+                        <input type="email" name="email" placeholder="Email Address...">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div></div>            </div>
+        </div>
+    </div>
+</footer>   
+<!--End Footer Style3 Area--> 
+<!--Start Footer bottom Style3 Area-->   
+<section class="footer-bottom-style3-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="footer-bottom-style3-content">
+                    <div class="copyright-text">
+                        <p>Copyright © Pristine Ideas Pvt. Ltd. | All Rights Reserved.</p>
+                    </div>
+                                        <div class="footer-menu-style2">
+                        <ul>
+                            							<li><a href="https://www.facebook.com/pristineideas/" style="background-color:; color: "><span class="fa fa-facebook"></span></a></li>
+														<li><a href="https://www.instagram.com/pristine_ideas/" style="background-color:; color: "><span class="fa fa-instagram"></span></a></li>
+														<li><a href="https://www.linkedin.com/company/pristineideas/" style="background-color:; color: "><span class="fa fa-linkedin-square"></span></a></li>
+														<li><a href="https://www.youtube.com/channel/UC9_HxkxY6tPjjWsNftiHA8Q" style="background-color:; color: "><span class="fa fa-youtube"></span></a></li>
+							                        </ul>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+    </div>    
+</section> 
+<!--End Footer bottom Style3 Area-->   
+
+</div> 
+
+<!-- Scroll Top Button -->
+<button class="scroll-top scroll-to-target" data-target="html">
+    <span class="icon-down-arrow"></span>
+</button><script type="rocketlazyloadscript">
+window.fbAsyncInit = function() {
+FB.init({
+appId: "253997891645969",
+xfbml: true,
+version: "v2.6"
+}); }; (function(d, s, id){
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) { return; }
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk')); </script>
+<link rel='preload'  href='https://pristineideas.com/wp-content/plugins/gmaper-elementor/css/gmaper-elementor.min.css?ver=1.0.2' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<link rel='preload'  href='https://pristineideas.com/wp-content/plugins/gmaper-elementor/src/Merkulove/Unity/assets/css/elementor-admin.min.css?ver=1.0.2' data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" onerror="this.removeAttribute('data-rocket-async')"  type='text/css' media='all' />
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/stratum/assets/js/editor-panel.min.js?ver=1.3.13' id='stratum-editor-panel-js-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/p/jetpack/11.3.1/_inc/build/photon/photon.min.js?ver=1664522846' id='jetpack-photon-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=1664522847' id='swv-js' defer></script>
+<script type='text/javascript' id='contact-form-7-js-extra'>
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/pristineideas.com\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/js/index.js?ver=1664522847' id='contact-form-7-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/appear.js?ver=1664522847' id='appear-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/themes/jixic/assets/js/bootstrap.bundle.min.js?ver=6.1.1' id='bootstrap-bundle-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/themes/jixic/assets/js/bootstrap-select.min.js?ver=6.1.1' id='bootstrap-select-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/isotope.js?ver=1664522847' id='isotope-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/jquery.bootstrap-touchspin.js?ver=1664522847' id='jquery-bootstrap-touchspin-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/jquery.countTo.js?ver=1664522847' id='jquery-countto-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/themes/jixic/assets/js/jquery.easing.min.js?ver=6.1.1' id='jquery-easing-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/themes/jixic/assets/js/jquery.enllax.min.js?ver=6.1.1' id='jquery-enllax-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/jquery.fancybox.js?ver=1664522847' id='jquery-fancybox-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/themes/jixic/assets/js/jquery.mixitup.min.js?ver=6.1.1' id='jquery-mixitup-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/themes/jixic/assets/js/jquery.paroller.min.js?ver=6.1.1' id='jquery-paroller-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/owl.js?ver=1664522847' id='owl-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/wow.js?ver=1664522847' id='wow-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/themes/jixic/assets/js/parallax.min.js?ver=6.1.1' id='parallax-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/themes/jixic/assets/js/jquery.mCustomScrollbar.concat.min.js?ver=6.1.1' id='jquery-mcustomscrollbar-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/mousemoveparallax.js?ver=1664522847' id='mousemoveparallax-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/aos.js?ver=1664522847' id='aos-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/stratum/vendors/jquery.countdown/jquery.plugin.min.js?ver=1.0' id='jquery-plugin-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/stratum/vendors/jquery.countdown/jquery.countdown.min.js?ver=2.1.0' id='jquery-countdown-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/slick.js?ver=1664522847' id='slick-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/util.js?ver=1664522847' id='util-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/themes/jixic/assets/js/TweenMax.min.js?ver=6.1.1' id='tweenmax-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/jquery.polyglot.language.switcher.js?ver=1664522847' id='jquery-polyglot-language-switcher-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/timePicker.js?ver=1664522847' id='timepicker-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/html5lightbox.js?ver=1664522848' id='html5lightbox-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/like.js?ver=1664522848' id='like-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/js/custom.js?ver=1664522848' id='main-custom-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=1664522848' id='elementskit-framework-js-frontend-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='elementskit-framework-js-frontend-js-after'>
+		var elementskit = {
+			resturl: 'https://pristineideas.com/wp-json/elementskit/v1/',
+		}
+
+		
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=1664522848' id='ekit-widget-scripts-js' defer></script>
+<script data-minify="1" type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-lazy-images/dist/intersection-observer.js?ver=1664522848' id='jetpack-lazy-images-polyfill-intersectionobserver-js' defer></script>
+<script type='text/javascript' id='jetpack-lazy-images-js-extra'>
+/* <![CDATA[ */
+var jetpackLazyImagesL10n = {"loading_warning":"Images are still loading. Please cancel your print and try again."};
+/* ]]> */
+</script>
+<script data-minify="1" type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/jetpack/jetpack_vendor/automattic/jetpack-lazy-images/dist/lazy-images.js?ver=1664522848' id='jetpack-lazy-images-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCGBizSWgShT07dzksgUo_HjWwPbw90fNc&#038;ver=6.1.1' id='google-maps-api-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.6.6' id='elementor-webpack-runtime-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.6.6' id='elementor-frontend-modules-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/jquery/ui/core.min.js?ver=1669015094' id='jquery-ui-core-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.6.6","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"a11y_improvements":true,"e_import_export":true,"additional_custom_breakpoints":true,"e_hidden_wordpress_widgets":true,"theme_builder_v2":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true,"page-transitions":true,"notes":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/pristineideas.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":5907,"title":"Website%20Development%20%E2%80%93%20Pristine%20Ideas","excerpt":"","featuredImage":false}};
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.6.6' id='elementor-frontend-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/gmaper-elementor/js/gmaper-elementor.min.js?ver=1.0.2' id='mdp-gmaper-elementor-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.7.2' id='elementor-pro-webpack-runtime-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=1669015094' id='regenerator-runtime-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=1669015094' id='wp-polyfill-js'></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/dist/hooks.min.js?ver=1669015094' id='wp-hooks-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://c0.wp.com/c/6.1.1/wp-includes/js/dist/i18n.min.js' id='wp-i18n-js'></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='wp-i18n-js-after'>
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+wp.i18n.setLocaleData( {"":{"domain":"stratum","lang":"en_US"}}, "stratum"  );
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='elementor-pro-frontend-js-before'>
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/pristineideas.com\/wp-admin\/admin-ajax.php","nonce":"037bd704d9","urls":{"assets":"https:\/\/pristineideas.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/pristineideas.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/pristineideas.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.7.2' id='elementor-pro-frontend-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.7.2' id='pro-elements-handlers-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.js?ver=1664522848' id='animate-circle-js' defer></script>
+<script type='text/javascript' id='elementskit-elementor-js-extra'>
+/* <![CDATA[ */
+var ekit_config = {"ajaxurl":"https:\/\/pristineideas.com\/wp-admin\/admin-ajax.php","nonce":"3d765ab223"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=1664522848' id='elementskit-elementor-js' defer></script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=2.6.2' id='swiper-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/imagesloaded.min.js?ver=1669015094' id='imagesloaded-js' defer></script>
+<script type='text/javascript' id='stratum-frontend-js-js-extra'>
+/* <![CDATA[ */
+var stratum = {"localeData":{"":{"domain":"stratum","lang":"en_US"}},"settings":{"wide_support":true},"ajax_url":"https:\/\/pristineideas.com\/wp-admin\/admin-ajax.php","nonces":{"get_articles":"14de0f45bf","get_elementor_templates":"2af41a58d2"}};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/stratum/assets/js/frontend.min.js?ver=1.3.13' id='stratum-frontend-js-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/underscore.min.js?ver=1669015094' id='underscore-js' defer></script>
+<script type='text/javascript' id='wp-util-js-extra'>
+/* <![CDATA[ */
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/wp-util.min.js?ver=1669015094' id='wp-util-js' defer></script>
+<script type='text/javascript' id='wpforms-elementor-js-extra'>
+/* <![CDATA[ */
+var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' src='https://pristineideas.com/wp-content/plugins/wpforms/assets/js/integrations/elementor/frontend.min.js?ver=1.6.8.1' id='wpforms-elementor-js' defer></script>
+<script src='https://stats.wp.com/e-202248.js' defer></script>
+<script>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:11.3.1',blog:'210627498',post:'5907',tz:'5.5',srv:'pristineideas.com'} ]);
+	_stq.push([ 'clickTrackerInit', '210627498', '5907' ]);
+</script>
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://pristineideas.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.5/lazyload.min.js"></script>
+<script>"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script><noscript><link data-minify="1" rel='stylesheet' id='mediaelement-css' href='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=1669014021' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='wp-mediaelement-css' href='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=1669014021' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='classic-theme-styles-css' href='https://pristineideas.com/wp-content/cache/min/1/c/6.1.1/wp-includes/css/classic-themes.min.css?ver=1669014021' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='contact-form-7-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=1664522840' type='text/css' media='all' /><link rel='stylesheet' id='jixic-google-fonts-css' href='https://fonts.googleapis.com/css?family=Montserrat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CPoppins%3A200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%7CMuli%3A300%2C400%2C600%2C700%2C800%2C900%7CKnewave%7CPlayfair+Display%3A400%2C700%2C900&#038;subset=latin%2Clatin-ext&#038;ver=6.1.1' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-animate-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/animate.css?ver=1664522840' type='text/css' media='all' /><link rel='stylesheet' id='jixic-bootstrap-css' href='https://pristineideas.com/wp-content/themes/jixic/assets/css/bootstrap.min.css?ver=6.1.1' type='text/css' media='all' /><link rel='stylesheet' id='jixic-bootstrap-select-css' href='https://pristineideas.com/wp-content/themes/jixic/assets/css/bootstrap-select.min.css?ver=6.1.1' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-custom-animate-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/custom-animate.css?ver=1664522840' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-font-awesome-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/font-awesome.min.css?ver=1664522840' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-icomoon-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/icomoon.css?ver=1664522840' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-imp-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/imp.css?ver=1664522840' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-jquery-bootstrap-touchspin-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/jquery.bootstrap-touchspin.css?ver=1664522840' type='text/css' media='all' /><link rel='stylesheet' id='jixic-jquery-fancybox-css' href='https://pristineideas.com/wp-content/themes/jixic/assets/css/jquery.fancybox.min.css?ver=6.1.1' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-owl-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/owl.css?ver=1664522840' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-owl-theme-default-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/owl.theme.default.css?ver=1664522840' type='text/css' media='all' /><link rel='stylesheet' id='jixic-jquery-mcustomscrollbar-css' href='https://pristineideas.com/wp-content/themes/jixic/assets/css/jquery.mCustomScrollbar.min.css?ver=6.1.1' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-slick-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/slick.css?ver=1664522840' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-aos-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/aos.css?ver=1664522840' type='text/css' media='all' /><link rel='stylesheet' id='jixic-swiper-css' href='https://pristineideas.com/wp-content/themes/jixic/assets/css/swiper.min.css?ver=6.1.1' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-flaticon-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/flaticon.css?ver=1664522840' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-nouislider-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/nouislider.css?ver=1664522840' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-nouislider-pips-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/nouislider.pips.css?ver=1664522840' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-timepicker-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/timePicker.css?ver=1664522840' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-jquery-ui-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/jquery-ui.css?ver=1664522841' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-polyglot-language-switcher-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/polyglot-language-switcher.css?ver=1664522841' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-energy-icon-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/energy-icon.css?ver=1664522841' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-woocommerce-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/woocommerce.css?ver=1664522841' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-custom-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/custom.css?ver=1664522841' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-main-style-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/style.css?ver=1664522842' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-tut-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/tut.css?ver=1664522844' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-gutenberg-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/gutenberg.css?ver=1664522844' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jixic-responsive-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/themes/jixic/assets/css/responsive.css?ver=1664522845' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='elementor-icons-ekiticons-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=1664522846' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='elementor-icons-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=1664522840' type='text/css' media='all' /><link rel='stylesheet' id='elementor-frontend-css' href='https://pristineideas.com/wp-content/plugins/elementor/assets/css/frontend-lite.min.css?ver=3.6.6' type='text/css' media='all' /><link rel='stylesheet' id='elementor-post-5034-css' href='https://pristineideas.com/wp-content/uploads/elementor/css/post-5034.css?ver=1663919958' type='text/css' media='all' /><link rel='stylesheet' id='stratum-widgets-style-css' href='https://pristineideas.com/wp-content/plugins/stratum/assets/css/style.min.css?ver=1.3.13' type='text/css' media='all' /><link rel='stylesheet' id='elementor-pro-css' href='https://pristineideas.com/wp-content/plugins/elementor-pro/assets/css/frontend-lite.min.css?ver=3.7.2' type='text/css' media='all' /><link rel='stylesheet' id='elementor-global-css' href='https://pristineideas.com/wp-content/uploads/elementor/css/global.css?ver=1663919968' type='text/css' media='all' /><link rel='stylesheet' id='elementor-post-5907-css' href='https://pristineideas.com/wp-content/uploads/elementor/css/post-5907.css?ver=1664561258' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='ekit-widget-styles-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=1664522846' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='ekit-responsive-css' href='https://pristineideas.com/wp-content/cache/min/1/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=1664522846' type='text/css' media='all' /><link rel='stylesheet' id='google-fonts-1-css' href='https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.1.1' type='text/css' media='all' /><link data-minify="1" rel='stylesheet' id='jetpack_css-css' href='https://pristineideas.com/wp-content/cache/min/1/p/jetpack/11.3.1/css/jetpack.css?ver=1664522846' type='text/css' media='all' /><link rel="stylesheet" type="text/css" id="wp-custom-css" href="https://pristineideas.com/?custom-css=aa82b02611" /><link rel='stylesheet' id='mdp-gmaper-css' href='https://pristineideas.com/wp-content/plugins/gmaper-elementor/css/gmaper-elementor.min.css?ver=1.0.2' type='text/css' media='all' /><link rel='stylesheet' id='mdp-gmaper-elementor-admin-css' href='https://pristineideas.com/wp-content/plugins/gmaper-elementor/src/Merkulove/Unity/assets/css/elementor-admin.min.css?ver=1.0.2' type='text/css' media='all' /></noscript></body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1669639531 -->

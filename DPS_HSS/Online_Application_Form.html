@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Online Appliction Form</title>
+	<link rel="icon" type="text/css" href="image\school.logo2.jpeg">
+	<link rel="stylesheet" type="text/css" href="Online_Application_Form.Style.css">
+</head>
+<body style="background: #D9DEDE;">
+	<div class="form_box">
+		<form action="index.html">
+
+		<!-- START STUDENT PERSONAL DETAIL -->
+
+		<img class="school_logo" src="image\school.logo2.jpeg">
+		<p class="scool_name"> <b>Delhi Public School</b></p>
+		<p class="arow">----------------------------</p>
+		<p class="indore"><b>Indore</b></p>
+		<p class="registration"><b>Registration Form 2023 - 2024</b></p>
+		<p class="student_personal_detail"><b>STUDENT'S PERSONAL DETALIS</b></p>
+		<hr>
+		<P class="ADMISSION_CLASS"><b>Admission for class<sup style="color: red;">*</sup></b></P> 
+		<select class="CLASS_SELECTOR">
+			<option>--SELECT--</option>
+			<option>I</option>
+			<option>II</option>
+			<option>III</option>
+			<option>IV</option>
+			<option>V</option>
+			<option>VI</option>
+			<option>VII</option>
+			<option>VII</option>
+			<option>IX</option>
+			<option>X</option>
+		</select>
+		<p class="gender"><b> Gender<sup style="color:red;">*</sup> </b></p>
+		<input class="mail_femail_tran" type="radio" name="radio" required>
+		<p class="m_f_t">Male &nbsp &nbsp  </p>
+		<input class="mail_femail_tran" type="radio" name="radio" required>
+		<p class="m_f_t">Femail &nbsp &nbsp </p>
+		<input class="mail_femail_tran" type="radio" name="radio" required>
+		<p class="m_f_t">Transgender</p>
+
+		<p class="student_name"><b>Student's Name<sup style="color:red;">*</sup></b></p>
+		<input class="stu_name" type="text" name="name" placeholder="CHILD" required>
+
+		<p class="Father_Name"><b>Father's Name <sup style="color:red;">*</sup></b></p>
+		<select class="Mr_SELECTOR" required>
+			 <option>Mr.</option>
+			 <option>Mrs.</option>
+			 <option>Ms.</option>
+			 <option>Dr</option>
+			 <option>Miss</option>
+			 <option>Col</option>
+			 <option>Justice</option>
+		</select>
+		<input class="fat_nam" type="text" name="father" placeholder="Father Name" required>
+
+		<p class="mother_Name"><b>Mother's Name <sup style="color:red;">*</sup></b></p>
+		<select class="Ms_mother_SELECTOR" required>
+			 <option>Mr.</option>
+			 <option>Mrs.</option>
+			 <option>Ms.</option>
+			 <option>Dr</option>
+			 <option>Miss</option>
+			 <option>Col</option>
+			 <option>Justice</option>
+		</select>
+		<input class="mor_nam" type="text" name="father" placeholder="Mother Name" required>
+
+		<p class="date"><b>Student's Date of Birth </b><sup style="color:red;">*</sup></p>
+		<input class="date_of_birth" type="date" name="date"required>
+
+		<p class="category"><b>Category<sup style="color:red;">*</sup></b></p>
+		<select class="Catergory_SELECTOR" required>
+			<option>Select</option>
+			<option>Bpl/Gen</option>
+			<option>Ews</option>
+			<option>Gen</option>
+			<option>OBC</option>
+			<option>Sc</option>
+			<option>St</option>
+		</select>
+
+		<!-- END STUDENT PERSONAL DETAIL -->
+
+		<!-- START CONTACT DETAILS -->
+
+		<p class="contact"><b>CONTACT DETAILS</b></p>
+		<hr>
+		<p class="Address"><b>Address</b> <sup style="color:red;">*</sup></p>
+		<input class="feedback" type="feedback" name="adress" required>
+        
+        <p class="country"><b>Country<sup style="color:red;">*</sup></b></p>
+        <select class="select_country" required >
+        	<option>--Select--</option>
+        	<option>India</option>
+        </select>
+
+        <p class="state"><b>State<sup style="color:red;">*</sup></b></p>
+        <select class="state_name_select" required>
+        	<option>--State--</option>
+        	<option>Andhra Pradesh</option>
+        	<option>Arunachal Pradesh</option>
+        	<option>Assam</option>
+        	<option>Bihar</option>
+        	<option>Chhattisgarh</option>
+        	<option>Goa</option>
+        	<option>Gujrat</option>
+        	<option>Haryana</option>
+        	<option>Himachal Pradesh</option>
+        	<option>Jharkhand</option>
+        	<option>Kerala</option>
+        	<option>Madhya Pradesh</option>
+        	<option>Maharashtra</option>
+        	<option>Mainpur</option>
+        	<option>Meghalaya</option>
+        	<option>Mizoram</option>
+        	<option>Nagaland</option>
+        	<option>Ordisha</option>
+        	<option>Punjab</option>
+        	<option>Rajasthan</option>
+        	<option>Sikkim</option>
+        	<option>Tamil Nadu</option>
+        	<option>Telangana</option>
+        	<option>Tripura</option>
+        	<option>Uttar Pradesh</option>
+        	<option>UttarakhandWest Bengal</option>
+        	<option>West Bengal</option>
+        </select>
+
+        <p class="city"><b>City <sup style="color:red;">*</sup></b></p>
+        <select class="city_select">
+        	<option>--City--</option>
+        </select>
+
+         <p class="mobile"><b>Mobile Number<sup style="color:red;">*</sup></b></p>
+         <input class="number" type="text" name="number" maxlength="12">
+
+         <p class="email"><b>E-Mail Id<sup style="color:red;">*</sup></b></p>
+         <input class="E-Mail_ID" type="email" name="email"placeholder="--Enter E-Mail Id--">
+
+         <!-- END CONTACT DETAIL -->
+
+         <!-- START ADDITIONAL DETAILS -->
+         <p class="UNDERTAKING_AGRMEENT"><b>UNDERTAKING AGRMEENT</b></p>
+         <hr>
+
+         <p class="i_agree_bellow"><b>I Agree To The Bellow <br>Mentioned Undertaking </b><sup style="color:red;">*</sup></p>
+         <select class="select_yesno">
+         	<option>--Select--</option>
+         	<option>Yes</option>
+         	<option>No</option>
+         </select>
+
+         <!-- END ADDITIONAL DETAILS -->
+
+         <p class="Upload_documents"><b>UPLOAD DOCUMENTS</b></p>
+         <hr>
+
+         <p class="photo_of_child"><b>Photo of Child<sup style="color:red;">*</sup></p></b></p>
+         <input class="child" type="file" name="Photo"required>
+
+         <p class="photo_of_child_Aadhar_card"><b>Photo of Child Aadhar Card<sup style="color:red;">*</sup></p></b></p>
+         <input class="child_Aadharcard" type="file" name="Photo"required>
+
+          <p class="Birth_certificate"><b>Birth Certificate<sup style="color:red;">*</sup></p></b></p>
+         <input class="birth" type="file" name="Photo"required>
+
+          <p class="mother_aadhar"><b>Mother Aadhar Card<sup style="color:red;">*</sup></p></b></p>
+         <input class="maa_aadhar_card" type="file" name="Photo"required>
+
+          <p class="Father_Aadhar_card"><b>Father Aadhar Card<sup style="color:red;">*</sup></p></b></p>
+         <input class="papa_aadhar_card" type="file" name="Photo"required>
+
+         <p class="SSMID"><b>SSMID<sup style="color:red;">*</sup></p></b></p>
+         <input class="SSMID_FAMILY" type="file" name="Photo"required>
+
+         <!-- END ADDITIONAL DETAILS -->
+
+         <!-- START UNDERTACKING  -->
+
+         <p class="UNDERTAKING"><b>UNDERTACKING</b></p>
+         <hr>
+         <p class="UNDERTACKING_DECLARATION"> <B>UNDERTACKING / DECLARATION</B></p>
+         <ul class="Delaration">
+         	<li> I fully understand that the school, on accepting the registration of my ward, is not in any way bound to grant admission. I also understand that the decision of the school authorities regarding admission will be final and binding on me.</li>
+         	<li> I fully understand that Delhi Public School, Indore has the right to offer admission based on vacancy of seats.</li>
+         	<li>I hereby certify that the Date of Birth and spelling of name of my ward given in this form are true and correct and I shall not make any request for change.</li>
+         	<li> I undertake that the information / documents submitted in this form are true and correct and not misleading and no relevant information has been concealed. I understand that false or misleading information or withholding correct information may disqualify my ward for admission/education at this school.</li>
+         </ul>
+
+
+
+         <p class="INSTRUCTIONS"><b>INSTRUCTIONS</b></p>
+         <ul class="registration_ONCE_COMPLETE">
+         	<li> Registration once completed for a particular year is non-transferable to any other year or to any other child.</li>
+         	<li>Issue of Registration Form does not Guarantee Admission.</li>
+         	<li>Please attach attested copy of Municipal Birth Certificate. • Please attach copy of the attested Mark Sheet of previous class examination.</li>
+         	<li>Attach copy of certificates for proficiency In Games, Co-curricular / outstanding achievements. (If any)</li>
+         	<li>Incomplete registration form will not be accepted. It is mandatory to attach all enclosures as stated above.</li>
+         </ul>
+
+         <!-- END UNDERTACKING  -->
+
+         <input class="SUBMIT_BUTTON" type="SUBMIT" name="SUBMIT" value="SUBMIT">
+         <p class="KAVYA"> DEVELOPED BY :- KAVYA RATHOD</p>
+
+
+
+		</form>
+	</div>
+
+
+</body>
+</html>

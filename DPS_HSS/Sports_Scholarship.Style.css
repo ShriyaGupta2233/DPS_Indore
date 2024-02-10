@@ -1,0 +1,332 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+}
+.marquee
+{
+	height: 50px;
+	width: 600px;
+	background:white;
+	margin-left: 350px;
+}
+.marquee marquee
+{
+	line-height: 50px;
+	color:#145A32;
+}
+.header_box
+{
+	height: 200px;
+	widows: 100px;
+	background: white;
+}
+.school_logo
+{
+	height: 150px;
+	width: 220px;
+	margin-top: -10px;
+	margin-left:100px;
+}
+.phone.logo
+{
+	height:30px;
+	width: 60px;
+	margin-left:620px;
+	position: absolute;
+	top: 90px;
+}
+.number
+{ 
+	height:40PX;
+	width: 200PX;
+	color:#145A32;
+	font-size: 20px;
+	margin-left:1000px;
+	margin-top: -100px;
+}
+.header_apply_online
+{
+	height:40px;
+	width: 130px;
+	background:#145A32;
+    border-radius:4PX ;
+    position: absolute;
+    left: 600PX;
+    top:60PX;
+    line-height: 35PX;
+    font-size: 12PX;
+    color:white;
+}
+.header_apply_online a
+{
+	text-decoration: none;
+	color: white;
+}
+.menu_bar
+{
+	height: 50px;
+	width: 100%;
+	background:#145A32;
+
+}
+.menu_bar ul li 
+{
+	float: left;
+	height: 50px;
+	width: 100px;
+	text-align: center;
+	line-height: 50px;
+	margin-left:80px;
+	font-size: 20px;
+	list-style-type: none;
+	z-index:5;
+}
+.menu_bar ul li a
+{
+  text-decoration: none;
+  color:white;
+}
+.menu_bar ul li:hover
+{
+	background: orange;
+}
+.menu_bar ul ul
+{
+
+	display: none;
+}
+.menu_bar ul li:hover>ul  
+{
+	display: block;
+}
+.Sport_Scholarships
+{
+	font-size: 49px;
+	margin-left: 70px;
+	margin-top: 50px;
+}
+.green
+{
+	width:50px;
+	height:8px;
+	background:#BCBF69;
+	margin-left:75px;
+	margin-top: 10px;
+	border-radius: 5px;
+}
+.Dep_phy_edu
+{
+	margin-left: 70px;
+	margin-top: 30px;
+	font-size:18px;
+}
+.img_spots
+{
+	height: 270px;
+	width: 540px ;
+	margin-left: 610px;
+	margin-top: 10px;
+}
+.games_swiming_etc
+{
+	width: 500px;
+	margin-left:70px;
+	position:relative;
+	top: -270px;
+}
+.Age_Group
+{
+	width: 500px;
+	margin-left:70px;
+	position:relative;
+	top: -240px;
+
+}
+.CATEGORIES
+{
+	width: 500px;
+	margin-left:70px;
+	position:relative;
+	top: -210px;
+}
+.DURATION
+{
+	width: 500px;
+	margin-left:70px;
+	position:relative;
+	top: -190px;
+}
+.NO_OF_SEAT
+{
+	width: 500px;
+	margin-left:70px;
+	position:relative;
+	top: -170px;
+}
+.Eligibility_Criteria
+{
+	width: 500px;
+	margin-left:70px;
+	position:relative;
+	top: -130px;
+	font-size: 18px;
+}
+.student_repreting li 
+{
+	margin-left: 90px;
+	position: relative;
+	top: -100px;
+}
+.Other_Conditions
+{
+	width: 500px;
+	margin-left:70px;
+	position:relative;
+	top: -80px;
+	font-size: 20px;
+}
+.THe_child_who_oualifies li
+{
+  margin-left: 90px;
+	position: relative;
+	top: -60px;
+}
+.Undertakittg_from_the_parents
+{
+	margin-left:70px;
+	position:relative;
+	top: -50px;
+	font-size: 20px;
+}
+.parents_to_give_etc
+{
+	margin-left: 90px;
+	position: relative;
+	top: -30px;
+}
+.Benefits
+{
+	margin-left:70px;
+	position:relative;
+	top: -20px;
+	font-size: 20px;
+}
+.Freeship_etc li 
+{
+  margin-left: 90px;
+	position: relative;
+	top: 0px;
+}
+.Exemption li 
+{
+  margin-left: 120px;
+	position: relative;
+	top: 10px;
+}
+.Exemption_admission li 
+{
+  margin-left: 120px;
+	position: relative;
+	top: 5px;	
+}
+.Exemption_tuition li 
+{
+	margin-left: 120px;
+	position: relative;
+	top: 15px;
+}
+.footer_bar
+{
+	height:400px;
+	width: 100%;
+	background:#F39C12;
+	
+}
+.school_address
+{
+	color: black;
+	font-size: 30px;
+	margin-left:50px;
+	padding-top:50px;
+	
+}
+.location
+{
+	width:250px;
+	margin-left: 60px;
+	padding-top:10px;
+	
+	font-size: 18px;
+
+}
+.img_location
+{
+	width: 40px;
+	height: 30px;
+	margin-left: 40px;
+	position: absolute;
+	top: 100px;
+}
+.contact
+{
+	font-size:30px;
+	padding-left:450px;
+	position: relative;
+	top: -105px;
+}
+.mob
+{
+	font-size: 18px;
+	margin-left: 450px;
+	position: relative;
+	top: -90px;
+	
+}
+.email
+{
+	font-size: 18px;
+	margin-left: 450px;
+	position: relative;
+	top: -80px;
+	
+}
+.dir_location
+{ 
+	font-size:30px;
+	padding-left: 940px;
+	position: relative;
+	top: -190px;
+}
+.map 
+{
+	margin-left:850px;
+	position:absolute;
+	top: 2610px;
+	height: 300px;
+	width: 400px;
+}
+
+.copy_right
+{
+	width:100%;
+	height:30px;
+	background:#145A32 ;
+	position: relative;
+	top: 0px;
+}
+.copyright_last
+{
+  font-size: 16px;
+  line-height: 30px;	
+  margin-left: 20px;
+  color: white;
+}
+.kavya
+{
+	font-size: 18px;
+  color:white;
+  position:absolute;
+  top: 5px;
+  left: 900px;
+}

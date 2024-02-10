@@ -1,0 +1,253 @@
+*
+{
+  margin: 0px;
+  padding: 0px;
+}
+.marquee
+{
+	height: 50px;
+	width: 600px;
+	background:white;
+	margin-left: 350px;
+}
+.marquee marquee
+{
+	line-height: 50px;
+	color:#145A32;
+}
+.header_box
+{
+	height: 200px;
+	widows: 100px;
+	background: white;
+}
+.school_logo
+{
+	height: 150px;
+	width: 220px;
+	margin-top: -10px;
+	margin-left:100px;
+}
+.phone.logo
+{
+	height:30px;
+	width: 60px;
+	margin-left:620px;
+	position: absolute;
+	top: 90px;
+}
+.number
+{ 
+	height:40PX;
+	width: 200PX;
+	color:#145A32;
+	font-size: 20px;
+	margin-left:1000px;
+	margin-top: -100px;
+}
+.header_apply_online
+{
+	height:40px;
+	width: 130px;
+	background:#145A32;
+    border-radius:4PX ;
+    position: absolute;
+    left: 600PX;
+    top:60PX;
+    line-height: 35PX;
+    font-size: 12PX;
+    color:white;
+}
+.header_apply_online a
+{
+	text-decoration: none;
+	color: white;
+}
+.menu_bar
+{
+	height: 50px;
+	width: 100%;
+	background:#145A32;
+
+}
+.menu_bar ul li 
+{
+	float: left;
+	height: 50px;
+	width: 100px;
+	text-align: center;
+	line-height: 50px;
+	margin-left:80px;
+	font-size: 20px;
+	list-style-type: none;
+	z-index:5;
+}
+.menu_bar ul li a
+{
+  text-decoration: none;
+  color:white;
+}
+.menu_bar ul li:hover
+{
+	background: orange;
+}
+.menu_bar ul ul
+{
+
+	display: none;
+}
+.menu_bar ul li:hover>ul  
+{
+	display: block;
+}
+.Admission_Process
+{
+	font-size: 40px;
+	margin-left: 100px;
+	margin-top: 50px;
+}
+.green
+{
+	width:50px;
+	height:8px;
+	background:#BCBF69;
+	margin-left: 100px;
+	border-radius: 5px;
+}
+.img_addmission_process
+{
+	height: 270px;
+	width: 540px ;
+	margin-left: 710px;
+	margin-top: 10px;
+}
+.step_1
+{
+	font-size: 18px;
+	width: 600px;
+	position:absolute;
+	top: 380px;
+	left: 60px;
+}
+.step_2
+{
+	font-size: 18px;
+	width: 600px;
+	position:absolute;
+	top: 480px;
+	left: 60px;
+}
+.step_3
+{
+	font-size: 18px;
+	width: 600px;
+	position:absolute;
+	top:600px;
+	left: 60px;
+}
+.kavya
+{
+	font-size: 18px;
+	width: 200px;
+	position: relative;
+	top: 50px;
+	left: 300px;
+	color: black;
+}
+.step_4
+{
+	font-size: 18px;
+	width: 600px;
+	position:absolute;
+	top: 880px;
+	left: 60px;
+}
+.footer_bar
+{ 
+	position: absolute;
+	top: 1000px;
+	height:400px;
+	width: 100%;
+	background:#F39C12;
+	
+}
+.school_address
+{
+	color: black;
+	font-size: 30px;
+	margin-left:50px;
+	padding-top:30px;
+	
+}
+.location
+{
+	width:250px;
+	margin-left: 60px;
+	padding-top:10px;
+	
+	font-size: 18px;
+
+}
+.img_location
+{
+	width: 40px;
+	height: 30px;
+	margin-left: 40px;
+	position:absolute;
+	top:0px;
+}
+.contact
+{
+	font-size:30px;
+	padding-left:450px;
+	position:absolute;
+	top: 30px;
+}
+.mob
+{
+	font-size: 18px;
+	margin-left: 450px;
+	position: absolute;
+	top: 80px;
+	
+}
+.email
+{
+	font-size: 18px;
+	margin-left: 450px;
+	position: absolute;
+	top: 120px;
+	
+}
+.dir_location
+{ 
+	font-size:30px;
+	padding-left: 940px;
+	position:absolute;
+	top:40px;
+}
+.map 
+{
+	margin-left:850px;
+	position:relative;
+	top: -40px;
+	height: 300px;
+	width: 400px;
+}
+
+.copy_right
+{
+	width:100%;
+	height:30px;
+	background:#145A32 ;
+	position:absolute;
+	top:1400px;
+}
+.copyright_last
+{
+  font-size: 16px;
+  line-height: 30px;	
+  margin-left: 20px;
+  color: white;
+  
+}

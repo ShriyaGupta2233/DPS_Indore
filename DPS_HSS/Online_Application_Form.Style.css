@@ -1,0 +1,449 @@
+
+*
+{
+	margin: 0px;
+	padding: 0px;
+}
+.form_box
+{
+	height: 1800px;
+	width: 900px;
+	border: 2PX solid black;
+	border-radius: 7PX;
+	background:#FAF5F5;
+	position: absolute;
+	top: 50px;
+	left: 160px;
+}
+.school_logo
+{
+       width: 80px;
+       height: 80px;
+       margin-left:450px;
+       margin-top: 20px;
+}
+.scool_name
+{
+	color: #229954;
+	font-size: 35px;
+	margin-left: 360px;
+}
+.arow
+{
+	color: #229954;
+	font-size: 35px;
+	margin-left: 340px;
+	margin-top: -20px;
+}
+.indore
+{
+	color: #229954;
+	font-size: 30px;
+	margin-left:450px;
+	margin-top: -15px;
+}
+.registration
+{
+	color:#21618C;
+	font-size:30px;
+	margin-left:320px;
+	margin-top: 20px;
+}
+.student_personal_detail
+{
+	margin-left: 20px;
+	font-size: 18px;
+	margin-top: 30px;
+	color:#21618C;
+}
+.ADMISSION_CLASS
+{
+  color:#21618C;
+  margin-top:35px;
+  margin-left:60px;
+  font-size:17px;
+}
+.CLASS_SELECTOR
+{
+	margin-left: 220PX;
+	width: 160px;
+	position: relative;
+	top: -20px;
+}
+.gender
+{
+	color:#21618C ;
+	position: relative;
+	top: -35px;
+	left: 600px;
+	font-size: 15px;
+}
+.mail_femail_tran
+{
+   position: relative;
+   left: 670px;
+   float: left;
+   top: -50px;
+}
+.m_f_t 
+{
+   position: relative;
+   left: 670px;
+   float: left;
+   top: -52px;
+   font-size: 15px;
+}
+.student_name
+{
+  color:#21618C;
+  position: relative;
+  top: -10px;
+  right: 125px;
+}
+.stu_name
+{
+	position: relative;
+	left: 220px;
+	top: -30px;
+	width: 250px;
+}
+.Father_Name
+{
+   color:#21618C;
+  position: relative;
+  top: -10px;
+  left: 95px;
+  
+}
+.Mr_SELECTOR 
+{
+    position: relative;
+    left: 220px;
+    top:-26px;
+}
+.fat_nam
+{
+	position: relative;
+	left: 230px;
+	top: -26px;
+	width: 170px;
+}
+.mother_Name		
+{
+  color:#21618C;
+  position: relative;
+  top: -10px;
+  left: 95px;
+}
+.Ms_mother_SELECTOR
+{
+    position: relative;
+    left: 220px;
+    top:-26px;
+}
+.mor_nam
+{
+  color:#21618C;
+  position: relative;
+  top: -27px;
+  left: 230px;
+}
+.date
+{
+  color:#21618C;
+  position: relative;
+  top: 0px;
+  left: 45px
+}
+.date_of_birth
+{
+  position: relative;
+  top: -20px;
+  left: 220px;
+  width: 150px;
+
+}
+.category
+{
+	color:#21618C ;
+	position: relative;
+	top: -35px;
+	left: 600px;
+	font-size: 15px;
+}
+.Catergory_SELECTOR
+{
+	position: relative;
+    left: 680px;
+    top:-52px;
+    width: 120px;
+}
+.contact
+{
+    margin-left:30px;
+	font-size: 18px;
+	margin-top:-20px;
+	color:#21618C;	
+}
+.Address
+{
+  color:#21618C;
+  position: relative;
+  top: 20px;
+  left: 130px;
+}
+.feedback
+{
+  position: relative;
+  top: 0px;
+  left: 220px;
+  width: 180px;
+  height: 30px;
+}
+.country
+{
+	color:#21618C ;
+	position: relative;
+	top: -30px;
+	left: 600px;
+	font-size: 17px;
+}
+.select_country
+{
+	position: relative;
+    left: 680px;
+    top:-52px;
+    width: 130px;
+    height: 25px;
+}
+.state
+{
+  color:#21618C;
+  position: relative;
+  top: -30px;
+  left: 150px;
+}
+.state_name_select
+{
+    position: relative;
+    left: 220px;
+    top:-52px;
+    width: 160px;
+    height: 28px;
+}
+.city
+{
+    color:#21618C ;
+	position: relative;
+	top: -80px;
+	left: 620px;
+	font-size: 17px;	
+}
+.city_select
+{
+	position: relative;
+    left: 680px;
+    top:-102px;
+    width: 130px;
+    height: 25px;
+}
+.mobile
+{
+    color:#21618C;
+    position: relative;
+    top: -80px;
+    left: 80px;
+}
+.number
+{
+	position: relative;
+    left: 220px;
+    top:-102px;
+    width:130px;
+    height: 24px;
+}
+.email
+{
+	color:#21618C ;
+	position: relative;
+	top: -125px;
+	left: 595px;
+	font-size: 15px;
+}
+.E-Mail_ID
+{
+	position: relative;
+    left: 680px;
+    top:-145px;
+    width: 140px;
+    height: 20px;
+}
+.UNDERTAKING_AGRMEENT
+{
+	margin-left:30px;
+	font-size: 18px;
+	margin-top:-100px;
+	color:#21618C;	
+}
+.i_agree_bellow
+{
+	color:#21618C;
+    position: relative;
+    top: 25px;
+    left: 80px;
+    font-size: 13px;
+}
+.select_yesno
+{
+	position: relative;
+    left: 240px;
+    top:-5px;
+    width:130px;
+    height: 24px;
+}
+.Upload_documents
+{
+	margin-left:30px;
+	font-size: 18px;
+	margin-top:35px;
+	color:#21618C;
+}
+.photo_of_child
+{
+    color:#21618C;
+    position: relative;
+    top: 25px;
+    left: 110px;
+}
+.child
+{
+    position: relative;
+    left: 260px;
+    top:5px;
+    height: 24px;
+}
+.photo_of_child_Aadhar_card
+{
+	color:#21618C;
+    position: relative;
+    top: 25px;
+    left: 110px;
+}
+.child_Aadharcard
+{
+	position: relative;
+    left: 340px;
+    top:5px;
+    height: 24px;
+}
+.Birth_certificate
+{
+	color:#21618C;
+    position: relative;
+    top: 25px;
+    left: 110px;
+}
+.birth
+{
+	position: relative;
+    left: 260px;
+    top:5px;
+    height: 24px;
+}
+.mother_aadhar
+{
+    color:#21618C;
+    position: relative;
+    top: 25px;
+    left: 80px;
+}
+.maa_aadhar_card
+{
+    position: relative;
+    left: 260px;
+    top:5px;
+    height: 24px;
+}
+.Father_Aadhar_card
+{
+    color:#21618C;
+    position: relative;
+    top: 25px;
+    left: 80px;
+}
+.papa_aadhar_card
+{
+    position: relative;
+    left: 260px;
+    top:5px;
+    height: 24px;
+}
+.SSMID
+{
+    color:#21618C;
+    position: relative;
+    top: 25px;
+    left: 170px;
+}
+.SSMID_FAMILY
+{
+	position: relative;
+    left: 260px;
+    top:5px;
+    height: 24px;
+}
+.UNDERTAKING
+{
+	margin-left:30px;
+	font-size: 18px;
+	margin-top:35px;
+	color:#21618C;
+}
+.UNDERTACKING_DECLARATION
+{
+	margin-left:50px;
+	font-size: 18px;
+	margin-top:35px;
+	color:#21618C;
+	font-size: 14PX;
+}
+.Delaration
+{
+	width: 750px;
+	margin-left: 110px;
+	margin-top: 10px;
+	color:#21618C ;
+}
+.INSTRUCTIONS
+{
+	margin-left:50px;
+	font-size: 16px;
+	margin-top:35px;
+	color:#21618C;
+}
+.registration_ONCE_COMPLETE
+{
+	width: 750px;
+	margin-left: 110px;
+	margin-top: 10px;
+	color:#21618C ;
+}
+.SUBMIT_BUTTON
+{
+	width: 170PX;
+	height: 30PX;
+	background:#21618C;
+	border: 2PX solid #21618C;
+	border-radius: 5PX;
+	font-size: 15PX;
+	color: white;
+	margin-left: 330PX;
+	margin-top: 80PX;
+}
+.KAVYA
+{
+	color: black;
+	font-size: 12PX;
+	margin-left: 330PX;
+	margin-top: 10PX;
+}
